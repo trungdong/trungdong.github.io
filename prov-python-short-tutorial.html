@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ProvBits, ">
+
+
+        <title>A Short Tutorial for Prov Python // ProvBits // </title>
+
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./theme/css/pure.css">
+    <link rel="stylesheet" href="./theme/css/pygments.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.0.1/jquery.fitvids.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".content").fitVids();
+        });
+    </script>
+</head>
+
+<body>
+<div class="pure-g-r" id="layout">
+    <div class="sidebar sidebar-article pure-u">
+        <header class="header-article">
+            <hgroup>
+                <a href="./author/trung-dong-huynh.html" title="See posts by Trung Dong Huynh">
+                </a>
+                <h2 class="article-info">Trung Dong Huynh</h2>
+                <small class="about-author"></small>
+                <h5>Published</h5>
+                <p>Thu 07 August 2014</p>
+                <a href="/">&larr;Home</a>
+            </hgroup>
+        </header>
+    </div>
+    <div class="pure-u">
+        <div class="content">
+            <section class="post">
+                <header class="post-header">
+                    <h1>A Short Tutorial for Prov Python</h1>
+                        <p class="post-meta">
+                            // under                                 <a class="post-category" href="./tag/prov-json.html">PROV-JSON</a>
+                                <a class="post-category" href="./tag/prov-n.html">PROV-N</a>
+                                <a class="post-category" href="./tag/provpy.html">ProvPy</a>
+                                <a class="post-category" href="./tag/provstore.html">ProvStore</a>
+                                <a class="post-category" href="./tag/python.html">Python</a>
+                                <a class="post-category" href="./tag/tutorial.html">tutorial</a>
+                        </p>
+                </header>
+            </section>
+            <p>Documentation is hard work! I started the <a href="https://pypi.python.org/pypi/prov/">PROV Python package</a> nearly <a href="https://github.com/trungdong/prov/graphs/contributors">three years ago</a> and its <a href="http://prov.readthedocs.org/">documentation</a> is still quite lacking. As a small effort to make up for it, I thought a simple tutorial might help a bit.  </p>
+<p>So here it is: <a href="http://nbviewer.ipython.org/github/trungdong/notebooks/blob/master/PROV%20Tutorial.ipynb">the first tutorial for PROV Python</a>!  </p>
+<p>It will guide you through:  </p>
+<ul>
+<li>Installing the Prov package</li>
+<li>Creating a PROV document in Python</li>
+<li>Exporting the document into <a href="http://www.w3.org/TR/prov-n/">PROV-N</a> and <a href="http://www.w3.org/Submission/2013/SUBM-prov-json-20130424/">PROV-JSON</a></li>
+<li>Displaying the document in a graphical format like the one on the right</li>
+<li>Saving a provenance document in the cloud at <a href="https://provenance.ecs.soton.ac.uk/store/">ProvStore</a> and retrieve it back</li>
+</ul>
+<p>All the above can be done in 10-15 minutes!  </p>
+<p>I hope you find <a href="http://nbviewer.ipython.org/github/trungdong/notebooks/blob/master/PROV%20Tutorial.ipynb">the tutorial</a> useful. Any suggestion or request, please do <a href="https://github.com/trungdong/notebooks/issues">let me know here</a>.<a href="https://www.blogger.com/"></a>  </p>
+<p><img alt="PROV-N JavaScript Editor Screenshot" src="./images/provbook-example.png" /></p>
+<p>PNG export of a simple example from the book <a href="http://www.provbook.org/">Provenance: An Introduction to PROV</a></p>
+<p><em>Updated 27-Feb-2015</em>: I added a simple instruction in the tutorial showing how to read (i.e. deserialise) a PROV-JSON file into a ProvDocument instance. In addition, I simplified the section on interacting with <a href="https://provenance.ecs.soton.ac.uk/store/">ProvStore</a> by using <a href="http://millar.io/">Sam Millar</a>'s <a href="https://github.com/millar/provstore-api">provstore-api</a> package.</p>
+            <div class="hr"></div>
+            <a href="#" class="go-top">Go Top</a>
+<div class="comments">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = "trungdong"; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div><footer class="footer">
+    <p>&copy; ProvBits &ndash;
+        Built with <a href="https://github.com/PurePelicanTheme/pure">Pure Theme</a>
+        for <a href="http://blog.getpelican.com/">Pelican</a>
+    </p>
+</footer>        </div>
+    </div>
+</div>
+    <script>
+        var $top = $('.go-top');
+
+        // Show or hide the sticky footer button
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 200) {
+                $top.fadeIn(200);
+            } else {
+                $top.fadeOut(200);
+            }
+        });
+
+        // Animate the scroll to top
+        $top.click(function(event) {
+            event.preventDefault();
+            $('html, body').animate({scrollTop: 0}, 300);
+        })
+
+        // Makes sure that the href="#" attached to the <a> elements
+        // don't scroll you back up the page.
+        $('body').on('click', 'a[href="#"]', function(event) {
+            event.preventDefault();
+        });
+    </script>
+    <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+        try {
+            var pageTracker = _gat._getTracker("UA-264417-8");
+            pageTracker._trackPageview();
+            } catch(err) {}
+    </script>
+</body>
+</html>
