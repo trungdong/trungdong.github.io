@@ -357,3 +357,18 @@ pre {
         background-position: 0;
     }
 }
+
+/* Customizations by @trungdong */
+.centered {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
