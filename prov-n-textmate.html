@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dong Huynh, ">
+
+        <link rel="alternate"  href="http://trungdong.github.io/feeds/all.atom.xml" type="application/atom+xml" title="Dong Huynh Full Atom Feed"/>
+
+        <title>TextMate Bundle for PROV-N // Dong Huynh // </title>
+
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://trungdong.github.io/theme/css/pure.css">
+    <link rel="stylesheet" href="http://trungdong.github.io/theme/css/pygments.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.0.1/jquery.fitvids.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".content").fitVids();
+        });
+    </script>
+</head>
+
+<body>
+<div class="pure-g-r" id="layout">
+    <div class="sidebar sidebar-article pure-u">
+        <header class="header-article">
+            <hgroup>
+                <a href="http://trungdong.github.io/author/dong-huynh.html" title="See posts by Dong Huynh">
+                </a>
+                <h2 class="article-info">Dong Huynh</h2>
+                <small class="about-author"></small>
+                <h5>Published</h5>
+                <p>Wed 19 March 2014</p>
+                <a href="/">&larr;Home</a>
+            </hgroup>
+        </header>
+    </div>
+    <div class="pure-u">
+        <div class="content">
+            <section class="post">
+                <header class="post-header">
+                    <h1>TextMate Bundle for PROV-N</h1>
+                        <p class="post-meta">
+                            // under                                 <a class="post-category" href="http://trungdong.github.io/tag/prov-n.html">PROV-N</a>
+                                <a class="post-category" href="http://trungdong.github.io/tag/provenance.html">provenance</a>
+                                <a class="post-category" href="http://trungdong.github.io/tag/syntax-highlighting.html">syntax highlighting</a>
+                                <a class="post-category" href="http://trungdong.github.io/tag/textmate.html">TextMate</a>
+                        </p>
+                </header>
+            </section>
+            <p>The Provenance Notation (<a href="http://www.w3.org/TR/prov-n/">PROV-N</a>) has been my chosen representation when it comes to writing provenance. It has a relatively low cognitive cost and easier for humans to read (at least to me), compared to other provenance representations. Even so, I usually found myself making mundane mistakes and typos and have had to repetitively rely on the <a href="https://provenance.ecs.soton.ac.uk/validator/">Provenance Validator</a> to check my provenance for syntactical errors. Hence the motivation to find a tool to help write provenance faster with less mistakes.  </p>
+<p>Here comes <a href="http://macromates.com/">TextMate</a>!  </p>
+<p>TextMate is a powerful text editor on Mac (which I have only used it lightly, on and off). It provides support for numerous text file formats thanks to the flexible extensibility it offers. Having discovered how to <a href="http://manual.macromates.com/en/language_grammars">define a new language</a> in TextMate, I set off trying to find a way to alleviate my pains with PROV-N authoring right away. To cut the story short, here is the results.  </p>
+<p><img alt="Screenshot of TextMate with PROV-N syntax highlighting" src="http://trungdong.github.io/images/textmate-prov-n-screenshot.png" /></p>
+<p><img src="http://trungdong.github.io/images/textmate-prov-n-snippets.png" alt="PROV-N Snippets" class="right" title="PROV-N Snippets"></p>
+<p>If you like what you see, grab the PROV-N TextMate bundle from my <a href="https://github.com/trungdong/provn-textmate">github repository</a>. An installation of TextMate, of course, is required.  </p>
+<p>In addition to the PROV-N syntax highlighting, another bonus provided by the bundle is the <a href="http://manual.macromates.com/en/bundles#tab_triggers">tab-triggered snippets</a> for all PROV-N statements. For example, you can just type <span style="font-family: Courier New, Courier, monospace;">wd⇥</span> (<span style="font-family: 'Courier New', Courier, monospace;">⇥</span> is the tab key) to get <span style="font-family: Courier New, Courier, monospace;">wasDerivedFrom(, , -, -, -, [])</span>. The list of all snippets is on the right (or look them up in the Bundles &gt; Provenance Notation menu in TextMate). Please note though that the PROV attributes snippets are available only between the square brackets (i.e. the attributes block) in a statement.  </p>
+<p>Disclaimer: The bundle is my very first attempt and there are many issues remained. Please don't expect it supports all possible valid PROV-N statements.  </p>
+<p>If you are working with PROV-N, I hope you will find this TextMate bundle useful. Contributions and suggestions are very welcome.  </p>
+<p><strong>For Sublime Text users</strong>: You can install the <a href="https://raw.github.com/trungdong/provn-textmate/master/prov-n.tmbundle/Syntaxes/provn.tmLanguage">PROV-N language grammar</a> in Sublime Text to get the same syntax highlighting as shown above. To do this, download and copy the file to the User package folder (Menu: Preferences &gt; Browse Packages...)  </p>
+<p><strong>Update</strong>: A JavaScript code editor supporting the PROV-N syntax is now available. See <a href="http://trungdong.github.io/prov-n-javascript-editor.html">this post</a>.</p>
+            <div class="hr"></div>
+            <a href="#" class="go-top">Go Top</a>
+<div class="comments">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = "trungdong-github-io"; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div><footer class="footer">
+    <p>&copy; Dong Huynh &ndash;
+        Built with <a href="https://github.com/PurePelicanTheme/pure">Pure Theme</a>
+        for <a href="http://blog.getpelican.com/">Pelican</a>
+    </p>
+</footer>        </div>
+    </div>
+</div>
+    <script>
+        var $top = $('.go-top');
+
+        // Show or hide the sticky footer button
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 200) {
+                $top.fadeIn(200);
+            } else {
+                $top.fadeOut(200);
+            }
+        });
+
+        // Animate the scroll to top
+        $top.click(function(event) {
+            event.preventDefault();
+            $('html, body').animate({scrollTop: 0}, 300);
+        })
+
+        // Makes sure that the href="#" attached to the <a> elements
+        // don't scroll you back up the page.
+        $('body').on('click', 'a[href="#"]', function(event) {
+            event.preventDefault();
+        });
+    </script>
+    <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+        try {
+            var pageTracker = _gat._getTracker("UA-264417-8");
+            pageTracker._trackPageview();
+            } catch(err) {}
+    </script>
+</body>
+</html>
