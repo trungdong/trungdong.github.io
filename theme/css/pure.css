@@ -203,8 +203,7 @@ pre {
     margin: 0 0.1em;
     padding: 0.2em 0.6em;
     color: #fff;
-    background: #999;
-    font-size: 90%;
+    font-size: 80%;
 }
 
 .archive-item {
@@ -371,4 +370,25 @@ pre {
 
 .float-right {
     float: right;
+}
+
+/* Colorful post categories: https://coolors.co/app/518aa0-f2c43c-75626f-77aa7d-f25c84 */
+.post-category:nth-child(5n+1) {
+    background: #518aa0;
+}
+
+.post-category:nth-child(5n+2) {
+    background: #f2c43c;
+}
+
+.post-category:nth-child(5n+3) {
+    background: #75626f;
+}
+
+.post-category:nth-child(5n+4) {
+    background: #77aa7d;
+}
+
+.post-category:nth-child(5n+5) {
+    background: #f25c84;
 }
