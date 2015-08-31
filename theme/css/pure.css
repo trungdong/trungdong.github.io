@@ -156,6 +156,10 @@ pre {
     color: #fff;
 }
 
+.links {
+    display: inline-block;
+}
+
 .links a {
     font-size: 15px;
     padding-left: 15px;
