@@ -7,7 +7,7 @@
 
         <link rel="alternate"  href="http://trungdong.github.io/feeds/all.atom.xml" type="application/atom+xml" title="Dong Huynh Full Atom Feed"/>
 
-        <title>ProvPy tag // Dong Huynh // </title>
+        <title>Software // Dong Huynh // </title>
 
 
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css">
@@ -46,49 +46,41 @@
     </div>
 </div>    <div class="pure-u-1">
         <div class="content">
-            <!-- A wrapper for all the blog posts -->
-            <div class="posts">
-                <h1 class="content-subhead">
-Posts tagged 'ProvPy'                </h1>
-<section class="post">
-    <header class="post-header">
-        <a href="http://trungdong.github.io/author/dong-huynh.html" title="See posts by Dong Huynh">
-        </a>
-        <h3><a class="post-title" href="http://trungdong.github.io/provpy-1.4.0.html">PROV Python 1.4.0</a></h3>
-            <p class="post-meta"><p>Last night, I released a new version of <a href="https://pypi.python.org/pypi/prov">PROV Python library</a>, version 1.4.0. It fixes <a href="https://github.com/trungdong/prov/issues/68">the prov:QUALIFIED_NAME bug</a> that I had inadvertently introduced since the inception of the library. <a href="http://lucmoreau.github.io/ProvToolbox/">ProvToolbox</a> recently fixed the same bug (since <a href="https://lucmoreau.wordpress.com/2015/07/24/what-is-in-provtoolbox-0-7-0/">version 0.7.0</a>), and with this release, the two libraries ...</p></p>
-            <p class="post-meta">
-                in <a href="http://trungdong.github.io/category/provenance.html">Provenance</a> &middot; Fri 14 August 2015
-            </p>
-    </header>
-</section><section class="post">
-    <header class="post-header">
-        <a href="http://trungdong.github.io/author/dong-huynh.html" title="See posts by Dong Huynh">
-        </a>
-        <h3><a class="post-title" href="http://trungdong.github.io/prov-python-short-tutorial.html">A Short Tutorial for Prov Python</a></h3>
-            <p class="post-meta"><p>Documentation is hard work! I started the work on the <a href="https://pypi.python.org/pypi/prov/">PROV Python package</a> nearly <a href="https://github.com/trungdong/prov/graphs/contributors">three years ago</a> and yet its <a href="http://prov.readthedocs.org/">documentation</a> is still quite lacking. As a small effort to make up for it, I thought a simple tutorial might help a bit.  </p>
-<p>So here it is: <a href="http://nbviewer.ipython.org/github/trungdong/notebooks/blob/master/PROV%20Tutorial.ipynb">the first tutorial ...</a></p></p>
-            <p class="post-meta">
-                in <a href="http://trungdong.github.io/category/provenance.html">Provenance</a> &middot; Thu 07 August 2014
-            </p>
-    </header>
-</section><div class="pagination-wrapper content-subhead">
-    <div class="pagination">
-        <div class="pagination-left">
-                &nbsp;
-        </div>
-        <span>Page 1 / 1</span>
-        <div class="pagination-right">
-        </div>
-    </div>
-</div><footer class="footer">
-    <p>&copy; Dong Huynh &ndash;
-        Built with <a href="http://blog.getpelican.com/">Pelican</a> based on <a href="https://github.com/PurePelicanTheme/pure">Pure Theme</a>
-    </p>
-</footer>            </div>
+            <h1 class="content-subhead">Software</h1>
+            <p><h2>PROV Python package</h2>
+<p>The <a href="https://pypi.python.org/pypi/prov">PROV package</a> is a Python library for the <a href="http://www.w3.org/TR/prov-dm/">PROV Data Model (PROV-DM)</a>, <em>the</em> standard for exchanging provenance data on the Web recommended by the World Wide Web Consortium. I started developing this library since my participation in the <a href="http://www.w3.org/2011/prov/">Provenance Working Group</a> at W3C (2012) to support recording provenance in various Python applications. As far as I am aware, it is still the only PROV library in Python available. See a <a href="http://trungdong.github.io/prov-python-short-tutorial.html">short tutorial</a> to have an overview of the library.</p>
+<h2>Web Applications</h2>
+<p>I have been involved in the development of various web applications built on the <a href="https://www.djangoproject.com/">Django platform</a>. Below are the ones that I led.</p>
+<h3>ProvStore</h3>
+<p><a href="https://provenance.ecs.soton.ac.uk/store/">ProvStore</a> is the first online public provenance repository supporting W3C's PROV standards. It allows users and applications to store and publish the provenance of their data on the Web. Provenance documents can be transformed, visualized, and shared in various file formats, with all the functionality also available via a RESTful API</p>
+<p><a href="https://provenance.ecs.soton.ac.uk/store/"><img alt="ProvStore Screenshot" src="http://trungdong.github.io/images/provstore-screenshot.png" /></a></p>
+<ul>
+<li>Paper: <a href="http://eprints.soton.ac.uk/365509/">ProvStore: A Public Provenance Repository</a></li>
+</ul>
+<h3>PICASO</h3>
+<p><a href="https://provenance.ecs.soton.ac.uk/picaso/">PICASO</a> is an online platform that crowdsources the links between related scientific work and any other relevant entities and events such as the dataset(s) it used, the poster or slides presenting it, the project that funded its authors, and even the presentation activity of the work in a conference session. PICASO encourages linking to objects residing in their own silos, such as linking a presentation on SlideShare to the digital object identifier (DOI) of the original paper. By so doing, PICASO provides the tool for researchers to publicly document the origins and derivatives of their work, or its provenance.</p>
+<p><a href="https://provenance.ecs.soton.ac.uk/picaso/"><img alt="PICASO Screenshot" src="http://trungdong.github.io/images/picaso-screenshot.png" /></a></p>
+<h3>CollabMap</h3>
+<iframe src="https://player.vimeo.com/video/22624839?color=ffffff&title=0&byline=0&portrait=0" width="640" height="480" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+<ul>
+<li>Paper: <a href="http://eprints.soton.ac.uk/350677/">Collabmap: Crowdsourcing Maps for Emergency Planning</a></li>
+</ul>
+<h2>Demonstrations</h2>
+<h3>HAC-ER</h3>
+<iframe src="https://player.vimeo.com/video/119525848?color=ffffff&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+<ul>
+<li>Paper: <a href="http://eprints.soton.ac.uk/374070/">HAC-ER: A disaster response system based on Human-Agent Collectives</a></li>
+</ul></p>
         </div>
     </div>
 </div>
-    <script>
+<footer class="footer">
+    <p>&copy; Dong Huynh &ndash;
+        Built with <a href="http://blog.getpelican.com/">Pelican</a> based on <a href="https://github.com/PurePelicanTheme/pure">Pure Theme</a>
+    </p>
+</footer>    <script>
         var $top = $('.go-top');
 
         // Show or hide the sticky footer button

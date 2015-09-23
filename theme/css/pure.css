@@ -147,7 +147,7 @@ pre {
 }
 
 .social {
-    display: inline-block;
+    display: block;
 }
 .social a {
     text-decoration: none;
