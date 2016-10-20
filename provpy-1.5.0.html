@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dong Huynh, ">
+
+        <link rel="alternate"  href="http://trungdong.github.io/feeds/all.atom.xml" type="application/atom+xml" title="Dong Huynh Full Atom Feed"/>
+
+        <title>PROV Python 1.5.0 Released! // Dong Huynh // </title>
+
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://trungdong.github.io/theme/css/pure.css">
+    <link rel="stylesheet" href="http://trungdong.github.io/theme/css/pygments.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.0.1/jquery.fitvids.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".content").fitVids();
+        });
+    </script>
+</head>
+
+<body>
+<div class="pure-g-r" id="layout">
+    <div class="sidebar sidebar-article pure-u">
+        <header class="header-article">
+            <hgroup>
+                <a href="http://trungdong.github.io/author/dong-huynh.html" title="See posts by Dong Huynh">
+                </a>
+                <h2 class="article-info">Dong Huynh</h2>
+                <small class="about-author"></small>
+                <h5>Published</h5>
+                <p>Thu 20 October 2016</p>
+                <a href="/">&larr;Home</a>
+            </hgroup>
+        </header>
+    </div>
+    <div class="pure-u">
+        <div class="content">
+            <section class="post">
+                <header class="post-header">
+                    <h1>PROV Python 1.5.0 Released!</h1>
+                        <p class="post-meta">
+                            // under                                 <a class="post-category" href="http://trungdong.github.io/tag/provpy.html">ProvPy</a>
+                                <a class="post-category" href="http://trungdong.github.io/tag/provstore.html">ProvStore</a>
+                                <a class="post-category" href="http://trungdong.github.io/tag/python.html">Python</a>
+                                <a class="post-category" href="http://trungdong.github.io/tag/prov-o.html">PROV-O</a>
+                                <a class="post-category" href="http://trungdong.github.io/tag/rdf.html">RDF</a>
+                        </p>
+                </header>
+            </section>
+            <p>I am pleased to announce that, after over a year since <a href="http://trungdong.github.io/provpy-1.4.0.html">Prov Python 1.4.0</a>, a new version of <a href="https://pypi.python.org/pypi/prov">PROV Python library</a>, version 1.5.0, is now available from PyPI. Thanks to the significant contribution by <a href="http://satra.cogitatum.org/">Satrajit Ghosh</a>, the library now supports RDF output and input (following the <a href="https://www.w3.org/TR/prov-o/">PROV ontology PROV-O</a>). This new serialisation is backed by <a href="https://github.com/RDFLib/rdflib">rdflib</a> and, hence, allows you to read/write PROV from/to all the representation supported by the library, such as <a href="https://www.w3.org/TR/turtle/">Turtle</a>, <a href="https://www.w3.org/TR/trig/">TriG</a> (for PROV document with bundles), <a href="http://json-ld.org/">JSON-LD</a>, etc.</p>
+<p>In addition to the usual bug fixes and minor improvements, some other changes are:</p>
+<ul>
+<li>A <code>direction</code> parameter can now be specified when generating PNG, PDF, SVG, etc. with <a href="http://prov.readthedocs.io/en/latest/prov.html#prov.dot.prov_to_dot"><code>prov_to_dot</code></a>.</li>
+<li>Once a PROV document is converted to a <a href="https://networkx.github.io/">NetworkX</a> graph, you can convert the graph back to a PROV document with <a href="http://prov.readthedocs.io/en/latest/prov.html#prov.graph.graph_to_prov"><code>graph_to_prov</code></a> (say after some graph manipulations).</li>
+<li>PROV Python library is now tested with Python 3.5.</li>
+</ul>
+<h2>Do you use ProvPy?</h2>
+<p>It is a nice surprise to learn that the PROV Python library is redistributed on <a href="https://conda-forge.github.io/">Conda Forge</a> (as I am not an <a href="https://anaconda.org/">Anaconda</a> user). If <strong>you</strong> are using the library in your software, I would love to hear about it! Please <a href="https://twitter.com/intent/tweet?button_hashtag=ProvPy">tweet</a> it using the hashtag <a href="https://twitter.com/intent/tweet?button_hashtag=ProvPy">#ProvPy</a>.</p>
+<p>As always, I would love to hear about any issue or feedback you might have, especially after a significant release of the library. Please report them to the library's <a href="https://github.com/trungdong/prov/issues">issue tracker</a>. Many thanks!</p>
+<h2>Getting started</h2>
+<p>If you are new to ProvPy or PROV, look at <a href="http://trungdong.github.io/prov-python-short-tutorial.html">the tutorial here</a> to see it in action. Go next to the library's <a href="http://prov.readthedocs.io/">documentation</a> to learn more.</p>
+<p>You can also find lots of publicly shared provenance documents available on <a href="https://provenance.ecs.soton.ac.uk/store/">ProvStore</a>.</p>
+<p>If you prefer a Java-based solution, get <a href="http://lucmoreau.github.io/ProvToolbox/">ProvToolbox</a> by <a href="http://users.ecs.soton.ac.uk/lavm/">Luc Moreau</a>.</p>
+            <div class="hr"></div>
+            <a href="#" class="go-top">Go Top</a>
+<div class="comments">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = "trungdong-github-io"; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div><footer class="footer">
+    <p>&copy; Dong Huynh &ndash;
+        Built with <a href="http://blog.getpelican.com/">Pelican</a> based on <a href="https://github.com/PurePelicanTheme/pure">Pure Theme</a>
+    </p>
+</footer>        </div>
+    </div>
+</div>
+    <script>
+        var $top = $('.go-top');
+
+        // Show or hide the sticky footer button
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 200) {
+                $top.fadeIn(200);
+            } else {
+                $top.fadeOut(200);
+            }
+        });
+
+        // Animate the scroll to top
+        $top.click(function(event) {
+            event.preventDefault();
+            $('html, body').animate({scrollTop: 0}, 300);
+        })
+
+        // Makes sure that the href="#" attached to the <a> elements
+        // don't scroll you back up the page.
+        $('body').on('click', 'a[href="#"]', function(event) {
+            event.preventDefault();
+        });
+    </script>
+    <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+        try {
+            var pageTracker = _gat._getTracker("UA-264417-8");
+            pageTracker._trackPageview();
+            } catch(err) {}
+    </script>
+</body>
+</html>
