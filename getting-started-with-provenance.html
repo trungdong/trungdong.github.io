@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dong Huynh, ">
+
+        <link rel="alternate"  href="http://trungdong.github.io/feeds/all.atom.xml" type="application/atom+xml" title="Dong Huynh Full Atom Feed"/>
+
+        <title>Getting started with provenance // Dong Huynh // </title>
+
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://trungdong.github.io/theme/css/pure.css">
+    <link rel="stylesheet" href="http://trungdong.github.io/theme/css/pygments.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.0.1/jquery.fitvids.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".content").fitVids();
+        });
+    </script>
+</head>
+
+<body>
+<div class="pure-g-r" id="layout">
+    <div class="sidebar sidebar-article pure-u">
+        <header class="header-article">
+            <hgroup>
+                <a href="http://trungdong.github.io/author/dong-huynh.html" title="See posts by Dong Huynh">
+                </a>
+                <h2 class="article-info">Dong Huynh</h2>
+                <small class="about-author"></small>
+                <h5>Published</h5>
+                <p>Thu 08 December 2016</p>
+                <a href="/">&larr;Home</a>
+            </hgroup>
+        </header>
+    </div>
+    <div class="pure-u">
+        <div class="content">
+            <section class="post">
+                <header class="post-header">
+                    <h1>Getting started with provenance</h1>
+                        <p class="post-meta">
+                            // under                                 <a class="post-category" href="http://trungdong.github.io/tag/prov-dm.html">PROV-DM</a>
+                                <a class="post-category" href="http://trungdong.github.io/tag/provpy.html">ProvPy</a>
+                                <a class="post-category" href="http://trungdong.github.io/tag/provstore.html">ProvStore</a>
+                                <a class="post-category" href="http://trungdong.github.io/tag/provtoolbox.html">ProvToolbox</a>
+                                <a class="post-category" href="http://trungdong.github.io/tag/software.html">software</a>
+                        </p>
+                </header>
+            </section>
+            <p>Where to start if you are interested in tracking provenance? This post will try
+to list all the tools, software, and materials that I know about to help me and
+everyone find what they need.</p>
+<p><strong>ONGOING -- STILL BEING UPDATED</strong></p>
+<h2>Provenance concepts</h2>
+<p>PROV is the current standard for provenance (by the World Wide Web Consortium).
+I recommend looking at the document roadmap in <a href="https://www.w3.org/TR/prov-overview/">PROV-OVERVIEW</a>
+first to see what it comprises and what document to read next.</p>
+<p>You might also find the book <a href="http://www.provbook.org/">Provenance: An Introduction to
+PROV</a> by Luc Moreau and Paul Groth, who chaired the
+standardisation of PROV, useful.</p>
+<h2>Libraries</h2>
+<p>Working with PROV in</p>
+<ul>
+<li>Java: <a href="http://lucmoreau.github.io/ProvToolbox/">ProvToolbox</a> (with tutorials).</li>
+<li>Python: my <a href="http://prov.readthedocs.io/">PROV Python package</a> (<a href="http://trungdong.github.io/prov-python-short-tutorial.html">tutorial</a>).</li>
+<li>JavaScript: <a href="https://bitbucket.org/provenance/provjs">ProvJS</a>.</li>
+<li>Matlab: <a href="http://www.artefact.tk/software/matlab/provenance/">Matlab provenance package</a></li>
+</ul>
+<p>Other provenance libraries:</p>
+<ul>
+<li>R: <a href="https://github.com/End-to-end-provenance/RDataTracker">RDataTracker</a>, <a href="https://github.com/NCEAS/recordr">recordr</a>.</li>
+</ul>
+<h2>Software</h2>
+<ul>
+<li><a href="https://provenance.ecs.soton.ac.uk/store/">ProvStore</a>: a free public repository for provenance documents (<a href="https://provenance.ecs.soton.ac.uk/store/help/api/">REST API</a> available).</li>
+</ul>
+<h2>Provenance Data</h2>
+<ul>
+<li><a href="https://provenance.ecs.soton.ac.uk/store/public/">Public documents on ProvStore</a></li>
+<li><a href="https://lucmoreau.wordpress.com/category/provenance-in-the-wild/">Provenance in the wild</a></li>
+</ul>
+<p>You can also generate synthetic provenance data using the <code>-generator</code> option
+provided by the <a href="https://github.com/lucmoreau/ProvToolbox/wiki/provconvert">provconvert</a> utility that comes with ProvToolbox (see above).</p>
+<h2>What have I missed?</h2>
+<p>Do let me know by <a href="https://twitter.com/intent/tweet?screen_name=trungdong" class="twitter-mention-button" data-show-count="false">Tweet to @trungdong</a>.</p>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <div class="hr"></div>
+            <a href="#" class="go-top">Go Top</a>
+<div class="comments">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = "trungdong-github-io"; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div><footer class="footer">
+    <p>&copy; Dong Huynh &ndash;
+        Built with <a href="http://blog.getpelican.com/">Pelican</a> based on <a href="https://github.com/PurePelicanTheme/pure">Pure Theme</a>
+    </p>
+</footer>        </div>
+    </div>
+</div>
+    <script>
+        var $top = $('.go-top');
+
+        // Show or hide the sticky footer button
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 200) {
+                $top.fadeIn(200);
+            } else {
+                $top.fadeOut(200);
+            }
+        });
+
+        // Animate the scroll to top
+        $top.click(function(event) {
+            event.preventDefault();
+            $('html, body').animate({scrollTop: 0}, 300);
+        })
+
+        // Makes sure that the href="#" attached to the <a> elements
+        // don't scroll you back up the page.
+        $('body').on('click', 'a[href="#"]', function(event) {
+            event.preventDefault();
+        });
+    </script>
+    <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+        try {
+            var pageTracker = _gat._getTracker("UA-264417-8");
+            pageTracker._trackPageview();
+            } catch(err) {}
+    </script>
+</body>
+</html>

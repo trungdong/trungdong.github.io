@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://trungdong.github.io/</loc>
-<lastmod>2016-10-20T11:30:32-00:00</lastmod>
+<lastmod>2016-12-08T10:55:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://trungdong.github.io/archives.html</loc>
-<lastmod>2016-10-20T11:30:32-00:00</lastmod>
+<lastmod>2016-12-08T10:55:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://trungdong.github.io/tags.html</loc>
-<lastmod>2016-10-20T11:30:32-00:00</lastmod>
+<lastmod>2016-12-08T10:55:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://trungdong.github.io/categories.html</loc>
-<lastmod>2016-10-20T11:30:32-00:00</lastmod>
+<lastmod>2016-12-08T10:55:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -40,7 +40,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://trungdong.github.io/software.html</loc>
-<lastmod>2016-10-20T11:30:32-00:00</lastmod>
+<lastmod>2016-12-08T10:55:00-00:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://trungdong.github.io/getting-started-with-provenance.html</loc>
+<lastmod>2016-12-08T09:44:53+00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -82,14 +89,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://trungdong.github.io/category/provenance.html</loc>
-<lastmod>2016-10-20T09:11:37-00:01</lastmod>
+<lastmod>2016-12-08T09:44:53-00:01</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://trungdong.github.io/tag/prov-json.html</loc>
-<lastmod>2015-08-14T16:26:08-00:01</lastmod>
+<loc>http://trungdong.github.io/tag/provtoolbox.html</loc>
+<lastmod>2016-12-08T09:44:53-00:01</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -102,8 +109,22 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>http://trungdong.github.io/tag/prov-dm.html</loc>
+<lastmod>2016-12-08T09:44:53-00:01</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>http://trungdong.github.io/tag/textmate.html</loc>
 <lastmod>2014-03-19T01:11:00-00:01</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://trungdong.github.io/tag/prov-json.html</loc>
+<lastmod>2015-08-14T16:26:08-00:01</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -117,13 +138,20 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://trungdong.github.io/tag/provstore.html</loc>
-<lastmod>2016-10-20T09:11:37-00:01</lastmod>
+<lastmod>2016-12-08T09:44:53-00:01</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://trungdong.github.io/tag/javascript.html</loc>
+<lastmod>2014-03-21T10:31:59-00:01</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://trungdong.github.io/tag/syntax-highlighting.html</loc>
 <lastmod>2014-03-21T10:31:59-00:01</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
@@ -159,7 +187,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://trungdong.github.io/tag/provpy.html</loc>
-<lastmod>2016-10-20T09:11:37-00:01</lastmod>
+<lastmod>2016-12-08T09:44:53-00:01</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -172,15 +200,15 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://trungdong.github.io/tag/syntax-highlighting.html</loc>
-<lastmod>2014-03-21T10:31:59-00:01</lastmod>
+<loc>http://trungdong.github.io/tag/software.html</loc>
+<lastmod>2016-12-08T09:44:53-00:01</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://trungdong.github.io/author/dong-huynh.html</loc>
-<lastmod>2016-10-20T09:11:37-00:01</lastmod>
+<lastmod>2016-12-08T09:44:53-00:01</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

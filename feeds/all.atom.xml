@@ -1,5 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Dong Huynh</title><link href="http://trungdong.github.io/" rel="alternate"></link><link href="http://trungdong.github.io/feeds/all.atom.xml" rel="self"></link><id>http://trungdong.github.io/</id><updated>2016-10-20T09:11:37+01:00</updated><entry><title>PROV Python 1.5.0 Released!</title><link href="http://trungdong.github.io/provpy-1.5.0.html" rel="alternate"></link><published>2016-10-20T09:11:37+01:00</published><updated>2016-10-20T09:11:37+01:00</updated><author><name>Dong Huynh</name></author><id>tag:trungdong.github.io,2016-10-20:provpy-1.5.0.html</id><summary type="html">&lt;p&gt;I am pleased to announce that, after over a year since &lt;a href="http://trungdong.github.io/provpy-1.4.0.html"&gt;Prov Python 1.4.0&lt;/a&gt;, a new version of &lt;a href="https://pypi.python.org/pypi/prov"&gt;PROV Python library&lt;/a&gt;, version 1.5.0, is now available from PyPI. Thanks to the significant contribution by &lt;a href="http://satra.cogitatum.org/"&gt;Satrajit Ghosh&lt;/a&gt;, the library now supports RDF output and input (following the &lt;a href="https://www.w3.org/TR/prov-o/"&gt;PROV ontology PROV-O&lt;/a&gt;). This new serialisation is backed by &lt;a href="https://github.com/RDFLib/rdflib"&gt;rdflib&lt;/a&gt; and, hence, allows you to read/write PROV from/to all the representation supported by the library, such as &lt;a href="https://www.w3.org/TR/turtle/"&gt;Turtle&lt;/a&gt;, &lt;a href="https://www.w3.org/TR/trig/"&gt;TriG&lt;/a&gt; (for PROV document with bundles), &lt;a href="http://json-ld.org/"&gt;JSON-LD&lt;/a&gt;, etc.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Dong Huynh</title><link href="http://trungdong.github.io/" rel="alternate"></link><link href="http://trungdong.github.io/feeds/all.atom.xml" rel="self"></link><id>http://trungdong.github.io/</id><updated>2016-12-08T09:44:53+00:00</updated><entry><title>Getting started with provenance</title><link href="http://trungdong.github.io/getting-started-with-provenance.html" rel="alternate"></link><published>2016-12-08T09:44:53+00:00</published><updated>2016-12-08T09:44:53+00:00</updated><author><name>Dong Huynh</name></author><id>tag:trungdong.github.io,2016-12-08:getting-started-with-provenance.html</id><summary type="html">&lt;p&gt;Where to start if you are interested in tracking provenance? This post will try
+to list all the tools, software, and materials that I know about to help me and
+everyone find what they need.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;ONGOING -- STILL BEING UPDATED&lt;/strong&gt;&lt;/p&gt;
+&lt;h2&gt;Provenance concepts&lt;/h2&gt;
+&lt;p&gt;PROV is the current standard for provenance (by the World Wide Web Consortium).
+I recommend looking at the document roadmap in &lt;a href="https://www.w3.org/TR/prov-overview/"&gt;PROV-OVERVIEW&lt;/a&gt;
+first to see what it comprises and what document to read next.&lt;/p&gt;
+&lt;p&gt;You might also find the book &lt;a href="http://www.provbook.org/"&gt;Provenance: An Introduction to
+PROV&lt;/a&gt; by Luc Moreau and Paul Groth, who chaired the
+standardisation of PROV, useful.&lt;/p&gt;
+&lt;h2&gt;Libraries&lt;/h2&gt;
+&lt;p&gt;Working with PROV in&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Java: &lt;a href="http://lucmoreau.github.io/ProvToolbox/"&gt;ProvToolbox&lt;/a&gt; (with tutorials).&lt;/li&gt;
+&lt;li&gt;Python: my &lt;a href="http://prov.readthedocs.io/"&gt;PROV Python package&lt;/a&gt; (&lt;a href="http://trungdong.github.io/prov-python-short-tutorial.html"&gt;tutorial&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;JavaScript: &lt;a href="https://bitbucket.org/provenance/provjs"&gt;ProvJS&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Matlab: &lt;a href="http://www.artefact.tk/software/matlab/provenance/"&gt;Matlab provenance package&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Other provenance libraries:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;R: &lt;a href="https://github.com/End-to-end-provenance/RDataTracker"&gt;RDataTracker&lt;/a&gt;, &lt;a href="https://github.com/NCEAS/recordr"&gt;recordr&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Software&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://provenance.ecs.soton.ac.uk/store/"&gt;ProvStore&lt;/a&gt;: a free public repository for provenance documents (&lt;a href="https://provenance.ecs.soton.ac.uk/store/help/api/"&gt;REST API&lt;/a&gt; available).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Provenance Data&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://provenance.ecs.soton.ac.uk/store/public/"&gt;Public documents on ProvStore&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://lucmoreau.wordpress.com/category/provenance-in-the-wild/"&gt;Provenance in the wild&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You can also generate synthetic provenance data using the &lt;code&gt;-generator&lt;/code&gt; option
+provided by the &lt;a href="https://github.com/lucmoreau/ProvToolbox/wiki/provconvert"&gt;provconvert&lt;/a&gt; utility that comes with ProvToolbox (see above).&lt;/p&gt;
+&lt;h2&gt;What have I missed?&lt;/h2&gt;
+&lt;p&gt;Do let me know by &lt;a href="https://twitter.com/intent/tweet?screen_name=trungdong" class="twitter-mention-button" data-show-count="false"&gt;Tweet to @trungdong&lt;/a&gt;.&lt;/p&gt;
+&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;</summary><category term="PROV-DM"></category><category term="ProvPy"></category><category term="ProvStore"></category><category term="ProvToolbox"></category><category term="software"></category></entry><entry><title>PROV Python 1.5.0 Released!</title><link href="http://trungdong.github.io/provpy-1.5.0.html" rel="alternate"></link><published>2016-10-20T09:11:37+01:00</published><updated>2016-10-20T09:11:37+01:00</updated><author><name>Dong Huynh</name></author><id>tag:trungdong.github.io,2016-10-20:provpy-1.5.0.html</id><summary type="html">&lt;p&gt;I am pleased to announce that, after over a year since &lt;a href="http://trungdong.github.io/provpy-1.4.0.html"&gt;Prov Python 1.4.0&lt;/a&gt;, a new version of &lt;a href="https://pypi.python.org/pypi/prov"&gt;PROV Python library&lt;/a&gt;, version 1.5.0, is now available from PyPI. Thanks to the significant contribution by &lt;a href="http://satra.cogitatum.org/"&gt;Satrajit Ghosh&lt;/a&gt;, the library now supports RDF output and input (following the &lt;a href="https://www.w3.org/TR/prov-o/"&gt;PROV ontology PROV-O&lt;/a&gt;). This new serialisation is backed by &lt;a href="https://github.com/RDFLib/rdflib"&gt;rdflib&lt;/a&gt; and, hence, allows you to read/write PROV from/to all the representation supported by the library, such as &lt;a href="https://www.w3.org/TR/turtle/"&gt;Turtle&lt;/a&gt;, &lt;a href="https://www.w3.org/TR/trig/"&gt;TriG&lt;/a&gt; (for PROV document with bundles), &lt;a href="http://json-ld.org/"&gt;JSON-LD&lt;/a&gt;, etc.&lt;/p&gt;
 &lt;p&gt;In addition to the usual bug fixes and minor improvements, some other changes are:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;A &lt;code&gt;direction&lt;/code&gt; parameter can now be specified when generating PNG, PDF, SVG, etc. with &lt;a href="http://prov.readthedocs.io/en/latest/prov.html#prov.dot.prov_to_dot"&gt;&lt;code&gt;prov_to_dot&lt;/code&gt;&lt;/a&gt;.&lt;/li&gt;
