@@ -7,7 +7,7 @@
 
         <link rel="alternate"  href="http://trungdong.github.io/feeds/all.atom.xml" type="application/atom+xml" title="Dong Huynh Full Atom Feed"/>
 
-        <title>PROV-N Javascript Editor // Dong Huynh // </title>
+        <title>Provenance Network Analytics paper // Dong Huynh // </title>
 
 
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css">
@@ -34,7 +34,7 @@
                 <h2 class="article-info">Dong Huynh</h2>
                 <small class="about-author"></small>
                 <h5>Published</h5>
-                <p>Fri 21 March 2014</p>
+                <p>Fri 16 February 2018</p>
                 <a href="/">&larr;Home</a>
             </hgroup>
         </header>
@@ -43,19 +43,25 @@
         <div class="content">
             <section class="post">
                 <header class="post-header">
-                    <h1>PROV-N Javascript Editor</h1>
+                    <h1>Provenance Network Analytics paper</h1>
                         <p class="post-meta">
-                            // under                                 <a class="post-category" href="http://trungdong.github.io/tag/editor.html">editor</a>
-                                <a class="post-category" href="http://trungdong.github.io/tag/javascript.html">JavaScript</a>
-                                <a class="post-category" href="http://trungdong.github.io/tag/prov-n.html">PROV-N</a>
-                                <a class="post-category" href="http://trungdong.github.io/tag/provenance.html">provenance</a>
-                                <a class="post-category" href="http://trungdong.github.io/tag/syntax-highlighting.html">syntax highlighting</a>
+                            // under                                 <a class="post-category" href="http://trungdong.github.io/tag/analytics.html">Analytics</a>
+                                <a class="post-category" href="http://trungdong.github.io/tag/papers.html">Papers</a>
+                                <a class="post-category" href="http://trungdong.github.io/tag/provenance.html">Provenance</a>
                         </p>
                 </header>
             </section>
-            <p>After showing the <a href="http://trungdong.github.io/prov-n-textmate.html">TextMate PROV-N bundle</a> to my colleagues, one pointed to me the powerful <a href="http://ace.c9.io/">Ace code editor</a>, which comes with tools to facilitate adding a new syntax. I found it even easier to work with compared to TextMate's bundle editor. After a day, I managed to port the PROV-N syntax rules to Ace and added some more. This is the result.  </p>
-<p><img class="pure-img centered" src="http://trungdong.github.io/images/prov-n-js-editor.png" title="PROV-N JavaScript Editor Screenshot" alt="PROV-N JavaScript Editor Screenshot"></p>
-<p>Try the new <a href="https://provenance.ecs.soton.ac.uk/tools/editor/">PROV-N editor</a> on our <a href="https://provenance.ecs.soton.ac.uk/">Southampton Provenance website</a> and let me know what you think.</p>
+            <p>I am very pleased to announce that the above paper has been published in Springer's <em>Data Mining and Knowledge Discovery</em> journal. It presents a novel approach to analysing provenance information, combining provenance network metrics and machine learning; the main aim currently is to label data from analysing their provenance.</p>
+<p>The paper is <a href="https://link.springer.com/article/10.1007%2Fs10618-017-0549-3">available online</a> and you can also get the PDF version directly at <a href="http://rdcu.be/G3Nz">http://rdcu.be/G3Nz</a>.</p>
+<p>This is also the first time that I published all the data and code used to produce the paper's results online: <a href="https://github.com/trungdong/datasets-provanalytics-dmkd">https://github.com/trungdong/datasets-provanalytics-dmkd</a>
+There, you can find notebooks describing the data preparation and the analyses shown in the paper along with some extra experiments that were not included due to space constraints.</p>
+<h2>What is it about?</h2>
+<p>Traditionally, data analytics usually involves analysing the data themselves to discover patterns, outliers, and insights. In the paper above, we analyse instead the <em>provenance</em> of the data, that is the historical record or the data describing its origins and what influenced its production.</p>
+<p>Analysing provenance records, however, is not straight-forward. Within the <a href="https://www.w3.org/TR/prov-dm/">PROV data model</a> that we use, there are three main provenance concepts: <a href="https://www.w3.org/TR/prov-dm/#term-entity">Entity</a>, <a href="https://www.w3.org/TR/prov-dm/#term-Activity">Activity</a>, and <a href="https://www.w3.org/TR/prov-dm/#term-agent">Agent</a>. In addition, there are 15+ possible provenance relations to link the three concepts, each of which has a specific meaning.</p>
+<p>In this work, we represent provenance information as a graph and analyse the topological characteristics of such a graph using network metrics, for example, measuring its size, diameter, or the distances between certain elements. By so doing, we can subsume provenance information into a set of numeric values reflecting the topology of its graph-based representation.</p>
+<p>Having the numeric features from provenance information, we then apply off-the-shelf machine learning algorithms to build predictive models for properties of the data described in the provenance information. Using this approach, in three different applications, we could re-infer the owners of provenance documents, assess the quality of crowdsourced data from <a href="https://collabmap.org/">CollabMap</a>, and detect instructions from chat messages in an alternate-reality game. </p>
+<p>In brief, the approach aims to infer some properties of data from analysing the network features of the data's provenance information, hence the name <strong>Provenance Network Analytics</strong>. One nice thing about this approach is that, apart from initial training examples, the predictive models can operate on provenance (represented using the PROV standards) without relying on domain-specific information. Therefore, it can serve as a generic data analytics tool in applications where provenance are captured or can be generated (from application logs, for example).</p>
+<p>We describe the approach in detail in the paper. If you are interested to know more, go read the paper at <a href="http://rdcu.be/G3Nz">http://rdcu.be/G3Nz</a>.</p>
             <div class="hr"></div>
             <a href="#" class="go-top">Go Top</a>
 <div class="comments">
