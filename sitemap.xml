@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://trungdong.github.io/</loc>
-<lastmod>2018-04-22T16:09:16-00:00</lastmod>
+<lastmod>2018-06-26T00:24:03-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://trungdong.github.io/archives.html</loc>
-<lastmod>2018-04-22T16:09:16-00:00</lastmod>
+<lastmod>2018-06-26T00:24:03-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://trungdong.github.io/tags.html</loc>
-<lastmod>2018-04-22T16:09:16-00:00</lastmod>
+<lastmod>2018-06-26T00:24:03-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://trungdong.github.io/categories.html</loc>
-<lastmod>2018-04-22T16:09:16-00:00</lastmod>
+<lastmod>2018-06-26T00:24:03-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -40,7 +40,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://trungdong.github.io/software.html</loc>
-<lastmod>2018-04-22T16:09:16-00:00</lastmod>
+<lastmod>2018-06-26T00:24:03-00:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://trungdong.github.io/provstore-new-home.html</loc>
+<lastmod>2018-06-26T00:09:36+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -54,7 +61,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://trungdong.github.io/getting-started-with-provenance.html</loc>
-<lastmod>2017-01-05T12:56:34+00:00</lastmod>
+<lastmod>2018-06-25T23:44:34+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -96,7 +103,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://trungdong.github.io/category/provenance.html</loc>
-<lastmod>2017-01-05T12:56:34-00:01</lastmod>
+<lastmod>2018-06-26T00:09:36-00:01</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -104,6 +111,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://trungdong.github.io/category/research.html</loc>
 <lastmod>2018-02-18T12:18:32-00:01</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://trungdong.github.io/tag/provstore.html</loc>
+<lastmod>2018-06-26T00:09:36-00:01</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -131,35 +145,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://trungdong.github.io/tag/prov-dm.html</loc>
-<lastmod>2017-01-05T12:56:34-00:01</lastmod>
+<lastmod>2018-06-25T23:44:34-00:01</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://trungdong.github.io/tag/provpy.html</loc>
-<lastmod>2017-01-05T12:56:34-00:01</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>http://trungdong.github.io/tag/provstore.html</loc>
-<lastmod>2017-01-05T12:56:34-00:01</lastmod>
+<lastmod>2018-06-25T23:44:34-00:01</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://trungdong.github.io/tag/provtoolbox.html</loc>
-<lastmod>2017-01-05T12:56:34-00:01</lastmod>
+<lastmod>2018-06-25T23:44:34-00:01</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://trungdong.github.io/tag/software.html</loc>
-<lastmod>2017-01-05T12:56:34-00:01</lastmod>
+<lastmod>2018-06-25T23:44:34-00:01</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -236,7 +243,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://trungdong.github.io/author/dong-huynh.html</loc>
-<lastmod>2018-02-18T12:18:32-00:01</lastmod>
+<lastmod>2018-06-26T00:09:36-00:01</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

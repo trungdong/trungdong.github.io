@@ -7,7 +7,7 @@
 
         <link rel="alternate"  href="http://trungdong.github.io/feeds/all.atom.xml" type="application/atom+xml" title="Dong Huynh Full Atom Feed"/>
 
-        <title>PROV-N Javascript Editor // Dong Huynh // </title>
+        <title>A new home for ProvStore // Dong Huynh // </title>
 
 
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css">
@@ -34,7 +34,7 @@
                 <h2 class="article-info">Dong Huynh</h2>
                 <small class="about-author"></small>
                 <h5>Published</h5>
-                <p>Fri 21 March 2014</p>
+                <p>Tue 26 June 2018</p>
                 <a href="/">&larr;Home</a>
             </hgroup>
         </header>
@@ -43,19 +43,38 @@
         <div class="content">
             <section class="post">
                 <header class="post-header">
-                    <h1>PROV-N Javascript Editor</h1>
+                    <h1>A new home for ProvStore</h1>
                         <p class="post-meta">
-                            // under                                 <a class="post-category" href="http://trungdong.github.io/tag/editor.html">editor</a>
-                                <a class="post-category" href="http://trungdong.github.io/tag/javascript.html">JavaScript</a>
-                                <a class="post-category" href="http://trungdong.github.io/tag/prov-n.html">PROV-N</a>
-                                <a class="post-category" href="http://trungdong.github.io/tag/provenance.html">provenance</a>
-                                <a class="post-category" href="http://trungdong.github.io/tag/syntax-highlighting.html">syntax highlighting</a>
+                            // under                                 <a class="post-category" href="http://trungdong.github.io/tag/provstore.html">ProvStore</a>
                         </p>
                 </header>
             </section>
-            <p>After showing the <a href="http://trungdong.github.io/prov-n-textmate.html">TextMate PROV-N bundle</a> to my colleagues, one pointed to me the powerful <a href="http://ace.c9.io/">Ace code editor</a>, which comes with tools to facilitate adding a new syntax. I found it even easier to work with compared to TextMate's bundle editor. After a day, I managed to port the PROV-N syntax rules to Ace and added some more. This is the result.  </p>
-<p><img class="pure-img centered" src="http://trungdong.github.io/images/prov-n-js-editor.png" title="PROV-N JavaScript Editor Screenshot" alt="PROV-N JavaScript Editor Screenshot"></p>
-<p>Try the new <a href="https://openprovenance.org/tools/editor/">PROV-N editor</a> and let me know what you think.</p>
+            <p>With my move to a new institution, the <a href="http://provenance.ecs.soton.ac.uk/store/">ProvStore at
+Southampton</a> is no longer maintained.
+In the recent months, we have been gradually migrating the PROV services to a
+new home at <a href="https://openprovenance.org/">openprovenance.org</a>, hosted by King's
+College London.</p>
+<p><strong>The new ProvStore service now lives at <a href="https://openprovenance.org/store/">openprovenance.org/store</a></strong>.</p>
+<p>(Please see <a href="https://lucmoreau.wordpress.com/2018/06/21/openprovenance-org-relaunched/">Luc's blog post</a> for the other services)</p>
+<h2>Backup your ProvStore data</h2>
+<p>We plan to retire the Southampton ProvStore service soon this year. In order to
+help the current users in downloading their data there, I wrote a ProvStore
+backup script (in Python): <a href="https://github.com/trungdong/provstore-backup">github.com/trungdong/provstore-backup</a>.</p>
+<p>Due to data protection, it is not possible for us to migrate user data to the
+new service. If you want to use the new ProvStore for storing your backed up
+provenance documents, you will need to create an account at the <a href="https://openprovenance.org/store/">new
+ProvStore</a> and upload the documents
+following the <a href="https://github.com/trungdong/provstore-backup#restore-instructions">restore instructions</a>.</p>
+<h2>Other changes</h2>
+<p>With the impending <a href="https://pythonclock.org">retirement of Python 2</a>, I have
+migrated the code base of ProvStore to <strong>Python 3</strong>, which is
+powering the new service.</p>
+<p>In addition, ProvStore is now using <a href="https://www.keycloak.org">Keycloak</a> as the
+authentication backend, with the view that it will be the central identity
+management service for all our future services at openprovenance.org.</p>
+<p>Undoubtedly, with such major changes to ProvStore, unforeseen issues will
+emerge. If you run into problems using the new service, please do <a href="https://provenance.uservoice.com">report
+them</a> and I will try to address them.</p>
             <div class="hr"></div>
             <a href="#" class="go-top">Go Top</a>
 <div class="comments">
