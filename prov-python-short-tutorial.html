@@ -7,37 +7,24 @@
 
         <link rel="alternate"  href="https://trungdong.github.io/feeds/all.atom.xml" type="application/atom+xml" title="Dong Huynh Full Atom Feed"/>
 
-        <title>A Short Tutorial for Prov Python // Dong Huynh // </title>
+        <title>A Short Tutorial for Prov Python // Dong Huynh</title>
 
 
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://trungdong.github.io/theme/css/pure.css">
+    <link rel="stylesheet" href="https://trungdong.github.io/theme/css/style.css">
     <link rel="stylesheet" href="https://trungdong.github.io/theme/css/pygments.css">
-
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.0.1/jquery.fitvids.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $(".content").fitVids();
-        });
-    </script>
 </head>
 
 <body>
-<div class="pure-g-r" id="layout">
-    <div class="sidebar sidebar-article pure-u">
+<div id="layout">
+    <div class="sidebar sidebar-article">
         <header class="header-article">
-            <hgroup>
-                <h2 class="article-info"><a href="https://trungdong.github.io/author/dong-huynh.html" title="See posts by Dong Huynh">Dong Huynh</a></h2>
-                <small class="about-author"></small>
-                <h5>Published</h5>
-                <p>Thu 07 August 2014</p>
-                <a href="/">&larr;Home</a>
-            </hgroup>
+            <h2 class="article-info"><a href="https://trungdong.github.io/author/dong-huynh.html" title="See posts by Dong Huynh">Dong Huynh</a></h2>
+            <h3 class="published-label">Published</h3>
+            <p><time datetime="2014-08-07T23:42:26+01:00">Thu 07 August 2014</time></p>
+            <a href="/">&larr;Home</a>
         </header>
     </div>
-    <div class="pure-u">
+    <div class="main">
         <div class="content">
             <section class="post">
                 <header class="post-header">
@@ -93,28 +80,27 @@
     </div>
 </div>
     <script>
-        var $top = $('.go-top');
-
-        // Show or hide the sticky footer button
-        $(window).scroll(function() {
-            if ($(this).scrollTop() > 200) {
-                $top.fadeIn(200);
-            } else {
-                $top.fadeOut(200);
+        // Replaces jQuery 2.0.3, which the theme loaded from a CDN to do only this.
+        (function () {
+            var top = document.querySelector('.go-top');
+            if (top) {
+                var sync = function () {
+                    top.classList.toggle('is-visible', window.scrollY > 200);
+                };
+                sync();
+                window.addEventListener('scroll', sync, { passive: true });
+                top.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
             }
-        });
 
-        // Animate the scroll to top
-        $top.click(function(event) {
-            event.preventDefault();
-            $('html, body').animate({scrollTop: 0}, 300);
-        })
-
-        // Makes sure that the href="#" attached to the <a> elements
-        // don't scroll you back up the page.
-        $('body').on('click', 'a[href="#"]', function(event) {
-            event.preventDefault();
-        });
+            // Anchors that exist only to be styled should not jump to the top.
+            document.addEventListener('click', function (event) {
+                var anchor = event.target.closest('a[href="#"]');
+                if (anchor) { event.preventDefault(); }
+            });
+        }());
     </script>
 </body>
 </html>

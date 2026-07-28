@@ -1,0 +1,442 @@
+/*
+ * Styles for the modified Pure theme.
+ *
+ * This file used to be layered on top of Pure 0.3.0 and FontAwesome 4.1.0, both
+ * loaded from cdnjs. It is now self-contained: the handful of Pure classes the
+ * templates used (.pure-g-r, .pure-u, .pure-u-1) have been replaced by the layout
+ * rules below, and the three social icons are inlined SVG. The site makes no
+ * third-party requests from its own markup.
+ *
+ * .pure-img is kept because a few articles reference it in raw HTML.
+ */
+
+:root {
+    color-scheme: light dark;
+
+    --text:        light-dark(#333332, #d8d8d4);
+    --text-strong: light-dark(#000000, #f4f4f2);
+    --muted:       light-dark(#6f6f6d, #9a9a96);
+    --bg:          light-dark(#ffffff, #16161a);
+    --link:        light-dark(#5a5ab0, #a9a9e8);
+    --rule:        light-dark(#f2f2f0, #303038);
+    --rule-strong: light-dark(#dededc, #3c3c46);
+    --on-cover:    #ffffff;
+
+    --sidebar-width: 25%;
+    --font: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+            "Helvetica Neue", Arial, sans-serif;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--text);
+}
+
+img, svg, iframe {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: var(--link);
+}
+a:hover,
+a:focus {
+    text-decoration: underline;
+}
+
+/* Visible keyboard focus. The old theme had none. */
+a:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+pre {
+    padding: 15px;
+    font-size: 90%;
+    overflow-x: auto;
+    background: light-dark(#f7f7f5, #1e1e24);
+    border: 1px solid var(--rule);
+}
+
+.highlight pre {
+    font-size: 75%;
+}
+
+/* ---------------------------------------------------------------- layout */
+
+#layout {
+    padding-left: var(--sidebar-width);
+    position: relative;
+}
+
+.sidebar {
+    position: fixed;
+    inset: 0 auto 0 0;
+    width: var(--sidebar-width);
+}
+
+.content {
+    padding: 2em 3em 0;
+    max-width: 1000px;
+    font-size: 110%;
+    line-height: 1.45;
+}
+
+/* --------------------------------------------------------------- sidebar */
+
+.cover-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset -1px 0 0 rgb(0 0 0 / 0.3);
+}
+
+.cover-body {
+    position: absolute;
+    bottom: 0;
+    max-width: 100%;
+    padding-top: 100px;
+    background-image: linear-gradient(to top,
+        rgb(0 0 0 / 0.5) 0, rgb(0 0 0 / 0.3) 70%, rgb(0 0 0 / 0) 100%);
+}
+
+.header {
+    text-align: left;
+    width: 767px;
+    max-width: 100%;
+}
+
+.brand-main {
+    margin: 0;
+}
+
+.brand-main a {
+    text-transform: uppercase;
+    margin-left: 15px;
+    font-size: 25px;
+    color: var(--on-cover);
+    border-bottom: 1px solid rgb(255 255 255 / 0.3);
+    text-shadow: 0 1px 3px rgb(0 0 0 / 0.3);
+}
+
+.tagline {
+    margin-left: 15px;
+    margin-top: -15px;
+    line-height: 15px;
+    font-size: 80%;
+    text-shadow: 0 1px 3px rgb(0 0 0 / 0.3);
+    color: var(--on-cover);
+}
+
+.links a {
+    font-size: 15px;
+    padding-left: 15px;
+    letter-spacing: 2px;
+    text-shadow: 0 1px 3px rgb(0 0 0 / 0.3);
+    color: var(--on-cover);
+}
+
+.social {
+    display: flex;
+    gap: 15px;
+    margin-left: 15px;
+    align-items: center;
+}
+
+.social a {
+    color: var(--on-cover);
+    display: inline-flex;
+    filter: drop-shadow(0 1px 3px rgb(0 0 0 / 0.4));
+}
+
+.social .icon {
+    width: 32px;
+    height: 32px;
+}
+
+/* ------------------------------------------------------- article sidebar */
+
+.header-article {
+    width: 767px;
+    max-width: 100%;
+    text-align: right;
+    padding-top: 4em;
+}
+
+.article-info {
+    padding-top: 15px;
+    clear: right;
+    font-weight: 300;
+    color: var(--text-strong);
+    word-wrap: break-word;
+}
+
+.published-label {
+    clear: both;
+    font-size: 0.83em;
+    margin: 1em 0 0;
+}
+
+.about-author {
+    display: block;
+    width: 85%;
+    float: right;
+    margin-bottom: 35px;
+}
+
+.avatar {
+    float: right;
+    border-radius: 50%;
+    margin-left: 16px;
+    margin-top: 7px;
+    width: 70px;
+    height: 70px;
+}
+
+/* ----------------------------------------------------------------- posts */
+
+.content-subhead {
+    text-transform: uppercase;
+    color: var(--muted);
+    border-bottom: 1px solid var(--rule);
+    padding: 0.4em 0;
+    font-size: 80%;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+}
+
+.post {
+    padding-bottom: 1em;
+    border-bottom: 1px solid var(--rule);
+}
+
+.post-title {
+    font-size: 1.5em;
+    color: var(--text-strong);
+    letter-spacing: -1px;
+}
+
+.post-meta {
+    color: var(--muted);
+    font-size: 90%;
+    margin-top: -10px;
+}
+
+.post-category {
+    margin: 0 0.1em;
+    padding: 0.2em 0.6em;
+    color: #fff;
+    background: #6f6f6d;
+    font-size: 90%;
+}
+
+/* Colourful post categories: https://coolors.co/app/518aa0-f2c43c-75626f-77aa7d-f25c84 */
+.post-category:nth-child(5n+1) { background: #45788c; }
+.post-category:nth-child(5n+2) { background: #8a6d10; }
+.post-category:nth-child(5n+3) { background: #75626f; }
+.post-category:nth-child(5n+4) { background: #4f7d56; }
+.post-category:nth-child(5n+5) { background: #c22f5c; }
+
+.hr {
+    border-top: 1px solid var(--rule);
+    width: 10%;
+    margin-top: 20px;
+}
+
+.comments {
+    padding: 50px 0 0;
+}
+
+/* -------------------------------------------------------------- archives */
+
+.archive-item {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--rule);
+}
+
+.archive-date {
+    margin: 0;
+}
+
+.archive-post {
+    line-height: 130%;
+}
+
+.archive-meta {
+    color: var(--muted);
+    font-size: 80%;
+    margin: -1px 0 0 0;
+}
+
+/* ------------------------------------------------- tag/category/author index */
+
+.term-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em 1.5em;
+}
+
+.term-count {
+    color: var(--muted);
+    font-size: 85%;
+}
+
+/* ------------------------------------------------------------ navigation */
+
+.footer {
+    text-align: center;
+    padding: 2em 0;
+    font-size: 75%;
+    color: var(--muted);
+}
+
+.pagination-wrapper {
+    padding-top: 6px;
+}
+
+.pagination {
+    font-size: 80%;
+    text-align: center;
+    position: relative;
+    width: 450px;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.pagination-left,
+.pagination-right {
+    position: absolute;
+    top: 0;
+}
+.pagination-left  { left: 0; }
+.pagination-right { right: 0; }
+
+.go-top {
+    position: fixed;
+    bottom: 2em;
+    right: 2em;
+    color: #fff;
+    background-color: rgb(0 0 0 / 0.4);
+    font-size: 12px;
+    padding: 1em;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 200ms ease, visibility 200ms ease;
+}
+
+.go-top.is-visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.go-top:hover {
+    background-color: rgb(0 0 0 / 0.7);
+}
+
+/* -------------------------------------------------------- content extras */
+
+/* Referenced from raw HTML inside a few articles. */
+.pure-img   { max-width: 100%; height: auto; }
+.centered   { display: block; margin-inline: auto; }
+.float-left { float: left; }
+.float-right{ float: right; }
+
+/*
+ * Video embeds. fitVids used to do this with jQuery; aspect-ratio does it in CSS.
+ * Browsers do not infer a ratio for iframes the way they do for images, so the ratio
+ * is explicit -- 16/9 by default, overridden per embed with
+ * style="--embed-ratio: 4 / 3" where the source is a different shape.
+ */
+.embed {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: var(--embed-ratio, 16 / 9);
+    border: 0;
+}
+
+/* ----------------------------------------------------------- small screens */
+
+@media (max-width: 767px) {
+    #layout {
+        padding: 0;
+    }
+
+    .sidebar {
+        position: static;
+        width: 100%;
+        height: 325px;
+    }
+
+    .sidebar.sidebar-article {
+        height: auto;
+        border-bottom: 1px solid var(--rule-strong);
+        padding-bottom: 35px;
+    }
+
+    .content {
+        padding: 1em 1.5em 0;
+        font-size: 85%;
+    }
+
+    .cover-img {
+        background-position: 0;
+    }
+
+    .cover-body {
+        padding-bottom: 5%;
+        padding-top: 0;
+    }
+
+    .avatar {
+        width: 45px;
+        height: 45px;
+    }
+
+    .about-author {
+        width: 100%;
+        float: none;
+    }
+
+    .header,
+    .header-article {
+        text-align: center;
+        position: static;
+    }
+
+    .social {
+        justify-content: center;
+        margin-left: 0;
+    }
+
+    .hr {
+        width: auto;
+        margin: 25px auto;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
