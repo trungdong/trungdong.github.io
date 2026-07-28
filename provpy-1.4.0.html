@@ -42,7 +42,7 @@
 <ul>
 <li>Changed the type of qualified names to prov:QUALIFIED_NAME</li>
 <li>Removed XSDQName class and stopped supporting parsing xsd:QName as qualified names</li>
-<li>Replaced pydot dependency with <a href="https://pydotplus.readthedocs.org/">pydotplus</a></li>
+<li>Replaced pydot dependency with <a href="https://pydotplus.readthedocs.io/">pydotplus</a></li>
 <li>Removed support for Python 2.6</li>
 </ul>
 <h2>prov:QUALIFIED_NAME, prov:QualifiedName, and xsd:QName</h2>
@@ -52,7 +52,7 @@
 <h2>Python 2.6 no longer supported</h2>
 <p>The 2.6 branch of Python had been at its end of life since Oct 2013 with the <a href="https://www.python.org/download/releases/2.6.9/">2.6.9 release</a>. The prov library's support for Python 2.6 had been requiring extra effort in writing codes for it and testing them, in addition to those to support Python 3. With more and more libraries dropping support for Python 2.6 (including networkx and pydotplus, which are used by prov), I think it is time for prov to move on. From version 1.4.0, prov no longer works with Python 2.6. It remains working with, and being tested for, Python 2.7, 3.3, 3.4, and PyPy.</p>
 <h2>pydot and pydotplus</h2>
-<p><strong>pydot</strong> had been used to represent PROV documents in the DOT format, allowing for the conversion of such documents into SVG, PNG, PDF, and other graphical formats supported by the excellent <a href="https://www.graphviz.org">Graphviz</a> package. The pydot, however, have not been updated for over 4 years. The official package does not work with Python 3 and, as a result, we had to use an unofficial fork. In this release, we decided to use <a href="https://pydotplus.readthedocs.org/"><strong>pydotplus</strong></a>, a drop-in replace for pydot that works with Python 3.</p>
+<p><strong>pydot</strong> had been used to represent PROV documents in the DOT format, allowing for the conversion of such documents into SVG, PNG, PDF, and other graphical formats supported by the excellent <a href="https://www.graphviz.org">Graphviz</a> package. The pydot, however, have not been updated for over 4 years. The official package does not work with Python 3 and, as a result, we had to use an unofficial fork. In this release, we decided to use <a href="https://pydotplus.readthedocs.io/"><strong>pydotplus</strong></a>, a drop-in replace for pydot that works with Python 3.</p>
 <p>At the same time, I took the opportunity to create a test for the DOT generation feature of prov. Although I still cannot find a way to verify the graphical outputs programmatically, the test at least exercises the code for this feature over the library's extensive test suite.</p>
 <h2>Endnote</h2>
 <p>As this release introduces some significant changes, I would love to hear about any issue or feedback you might have. Please report them to the library's <a href="https://github.com/trungdong/prov/issues">issue tracker</a>. Many thanks!</p>
@@ -75,8 +75,7 @@
     <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 </div><footer class="footer">
     <p>&copy; Dong Huynh &ndash;
-        Built with <a href="https://github.com/PurePelicanTheme/pure">Pure Theme</a>
-        for <a href="http://blog.getpelican.com/">Pelican</a>
+        Built for <a href="https://getpelican.com/">Pelican</a>
     </p>
 </footer>        </div>
     </div>
