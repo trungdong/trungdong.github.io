@@ -3,7 +3,15 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Dong Huynh">
+    <meta name="description" content="PROV Python package The PROV package is a Python library for the PROV Data Model (PROV-DM), the World Wide Web Consortium&#39;s standard for exchanging provenance data on the Web. I started it in...">
+
+    <meta property="og:site_name" content="Dong Huynh">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Software">
+    <meta property="og:description" content="PROV Python package The PROV package is a Python library for the PROV Data Model (PROV-DM), the World Wide Web Consortium&#39;s standard for exchanging provenance data on the Web. I started it in...">
+    <meta property="og:url" content="https://trungdong.github.io/software.html">
+    <meta property="og:image" content="https://trungdong.github.io/images/dong.huynh.cover.jpg">
+    <meta name="twitter:card" content="summary">
 
         <link rel="alternate"  href="https://trungdong.github.io/feeds/all.atom.xml" type="application/atom+xml" title="Dong Huynh Full Atom Feed"/>
 
@@ -37,16 +45,22 @@
         <div class="content">
             <h1 class="content-subhead">Software</h1>
             <h2>PROV Python package</h2>
-<p>The <a href="https://pypi.python.org/pypi/prov">PROV package</a> is a Python library for the <a href="https://www.w3.org/TR/prov-dm/">PROV Data Model (PROV-DM)</a>, <em>the</em> standard for exchanging provenance data on the Web recommended by the World Wide Web Consortium. I started developing this library since my participation in the <a href="https://www.w3.org/2011/prov/">Provenance Working Group</a> at W3C (2012) to support recording provenance in various Python applications. As far as I am aware, it is still the only PROV library in Python available. See a <a href="https://trungdong.github.io/prov-python-short-tutorial.html">short tutorial</a> to have an overview of the library.</p>
+<p>The <a href="https://pypi.org/project/prov/">PROV package</a> is a Python library for the <a href="https://www.w3.org/TR/prov-dm/">PROV Data Model (PROV-DM)</a>, the World Wide Web Consortium's standard for exchanging provenance data on the Web. I started it in 2012, during my participation in the W3C <a href="https://www.w3.org/2011/prov/">Provenance Working Group</a>, to record provenance in Python applications, and it has been the reference Python implementation of PROV since. Version 3 (2026) has no unconditional runtime dependencies, reads and writes PROV-JSON, PROV-JSONLD, PROV-XML and PROV-O, and is typed throughout. It is used by workflow engines such as <a href="https://nipype.readthedocs.io/">nipype</a> and <a href="https://github.com/common-workflow-language/cwltool">cwltool</a>, and by provenance tools in neuroimaging, seismology, climate science and astronomy.</p>
+<ul>
+<li>Documentation: <a href="https://prov.readthedocs.io/">prov.readthedocs.io</a>, starting with the <a href="https://prov.readthedocs.io/en/latest/tutorial/getting-started.html">tutorial</a></li>
+<li>Source and issue tracker: <a href="https://github.com/trungdong/prov">github.com/trungdong/prov</a></li>
+<li>Citation: <a href="https://doi.org/10.5281/zenodo.22696001">DOI 10.5281/zenodo.22696001</a></li>
+</ul>
 <h2>Web Applications</h2>
 <p>I have been involved in the development of various web applications built on the <a href="https://www.djangoproject.com/">Django platform</a>. Below are the ones that I led.</p>
-<h3>ProvStore</h3>
-<p><a href="https://openprovenance.org/store/">ProvStore</a> is the first online public
-provenance repository supporting W3C's PROV standards. It allows users and
-applications to store and publish the provenance of their data on the Web.
-Provenance documents can be transformed, visualized, and shared in various file
-formats, with all the functionality also available via a RESTful API</p>
-<p><a href="https://openprovenance.org/store/"><img alt="ProvStore Screenshot" src="https://trungdong.github.io/images/provstore-screenshot.png"></a></p>
+<h3>ProvStore (2013 to 2024)</h3>
+<p>ProvStore was the first online public provenance repository supporting W3C's
+PROV standards. It allowed users and applications to store and publish the
+provenance of their data on the Web. Provenance documents could be transformed,
+visualised and shared in various file formats, with all the functionality also
+available via a RESTful API. It ran at the University of Southampton from 2013
+and at King's College London from 2018, and was retired in December 2024.</p>
+<p><img alt="ProvStore Screenshot" src="https://trungdong.github.io/images/provstore-screenshot.png"></p>
 <ul>
 <li>Paper: <a href="https://eprints.soton.ac.uk/365509/">ProvStore: A Public Provenance Repository</a></li>
 </ul>
