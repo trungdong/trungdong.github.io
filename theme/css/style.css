@@ -62,7 +62,8 @@ a:focus {
 
 /* Links inside running text are underlined so colour is not the only cue (WCAG 1.4.1). */
 .content p a,
-.content li a {
+.content li a,
+.footer a {
     text-decoration: underline;
     text-underline-offset: 0.15em;
 }
