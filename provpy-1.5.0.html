@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://gc.zgo.at https://giscus.app; connect-src 'self' https://trungdong.goatcounter.com; img-src 'self' https://trungdong.goatcounter.com; frame-src https://giscus.app https://player.vimeo.com; style-src 'self' 'unsafe-inline' https://giscus.app; base-uri 'none'; object-src 'none'; form-action 'none'">    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="I am pleased to announce that, after over a year since Prov Python 1.4.0, a new version of PROV Python library, version 1.5.0, is now available from PyPI. Thanks to the significant contribution by...">
 
     <meta property="og:site_name" content="Dong Huynh">
@@ -83,8 +83,9 @@
 <p>As always, I would love to hear about any issue or feedback you might have, especially after a significant release of the library. Please report them to the library's <a href="https://github.com/trungdong/prov/issues">issue tracker</a>. Many thanks!</p>
 <h2>Getting started</h2>
 <p>If you are new to ProvPy or PROV, look at <a href="https://trungdong.github.io/prov-python-short-tutorial.html">the tutorial here</a> to see it in action. Go next to the library's <a href="https://prov.readthedocs.io/">documentation</a> to learn more.</p>
-<p>You can also find lots of publicly shared provenance documents available on <a href="https://openprovenance.org/store/">ProvStore</a>.</p>
+<p>You can also find lots of publicly shared provenance documents available on ProvStore.</p>
 <p>If you prefer a Java-based solution, get <a href="https://lucmoreau.github.io/ProvToolbox/">ProvToolbox</a> by <a href="https://nms.kcl.ac.uk/luc.moreau/">Luc Moreau</a>.</p>
+<p><em>Updated 12-Sep-2026</em>: ProvStore was retired in December 2024. See <a href="https://trungdong.github.io/software.html">the software page</a> for its history.</p>
             <div class="hr"></div>
             <a href="#" class="go-top">Go Top</a>
 <div class="comments">
@@ -98,7 +99,7 @@
         data-reactions-enabled="1"
         data-emit-metadata="0"
         data-input-position="top"
-        data-theme="light"
+        data-theme="preferred_color_scheme"
         data-lang="en"
         data-loading="lazy"
         crossorigin="anonymous"
@@ -112,28 +113,6 @@
 </footer>        </div>
     </div>
 </div>
-    <script>
-        // Replaces jQuery 2.0.3, which the theme loaded from a CDN to do only this.
-        (function () {
-            var top = document.querySelector('.go-top');
-            if (top) {
-                var sync = function () {
-                    top.classList.toggle('is-visible', window.scrollY > 200);
-                };
-                sync();
-                window.addEventListener('scroll', sync, { passive: true });
-                top.addEventListener('click', function (event) {
-                    event.preventDefault();
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                });
-            }
-
-            // Anchors that exist only to be styled should not jump to the top.
-            document.addEventListener('click', function (event) {
-                var anchor = event.target.closest('a[href="#"]');
-                if (anchor) { event.preventDefault(); }
-            });
-        }());
-    </script>
-<script data-goatcounter="https://trungdong.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script></body>
+    <script src="https://trungdong.github.io/theme/js/site.js" defer></script>
+<script data-goatcounter="https://trungdong.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script></body>
 </html>

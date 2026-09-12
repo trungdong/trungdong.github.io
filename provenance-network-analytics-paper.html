@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://gc.zgo.at https://giscus.app; connect-src 'self' https://trungdong.goatcounter.com; img-src 'self' https://trungdong.goatcounter.com; frame-src https://giscus.app https://player.vimeo.com; style-src 'self' 'unsafe-inline' https://giscus.app; base-uri 'none'; object-src 'none'; form-action 'none'">    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="I am very pleased to announce that the above paper has been published in Springer&#39;s Data Mining and Knowledge Discovery journal. It presents a novel approach to analysing provenance information,...">
 
     <meta property="og:site_name" content="Dong Huynh">
@@ -69,7 +69,7 @@
                         </p>
                 </header>
             </section>
-            <p><a href="https://link.springer.com/article/10.1007%2Fs10618-017-0549-3"><img alt="Provenance Network Analytics paper - PDF version" src="https://trungdong.github.io/images/provenance-network-analytics-paper-title.png"></a></p>
+            <p><a href="https://link.springer.com/article/10.1007%2Fs10618-017-0549-3"><img alt="Provenance Network Analytics paper - PDF version" src="https://trungdong.github.io/images/provenance-network-analytics-paper-title.png" width="1078" height="648"></a></p>
 <p>I am very pleased to announce that the above paper has been published in Springer's <em>Data Mining and Knowledge Discovery</em> journal. It presents a novel approach to analysing provenance information, combining provenance network metrics and machine learning; the main aim currently is to label data from analysing their provenance.</p>
 <p>The paper is <a href="https://link.springer.com/article/10.1007%2Fs10618-017-0549-3">available online</a> and you can also get the PDF version directly at <a href="https://rdcu.be/G3Nz">https://rdcu.be/G3Nz</a>.</p>
 <p>This is also the first time that I published all the data and code used to produce the paper's results online: <a href="https://github.com/trungdong/datasets-provanalytics-dmkd">https://github.com/trungdong/datasets-provanalytics-dmkd</a>
@@ -94,7 +94,7 @@ There, you can find notebooks describing the data preparation and the analyses s
         data-reactions-enabled="1"
         data-emit-metadata="0"
         data-input-position="top"
-        data-theme="light"
+        data-theme="preferred_color_scheme"
         data-lang="en"
         data-loading="lazy"
         crossorigin="anonymous"
@@ -108,28 +108,6 @@ There, you can find notebooks describing the data preparation and the analyses s
 </footer>        </div>
     </div>
 </div>
-    <script>
-        // Replaces jQuery 2.0.3, which the theme loaded from a CDN to do only this.
-        (function () {
-            var top = document.querySelector('.go-top');
-            if (top) {
-                var sync = function () {
-                    top.classList.toggle('is-visible', window.scrollY > 200);
-                };
-                sync();
-                window.addEventListener('scroll', sync, { passive: true });
-                top.addEventListener('click', function (event) {
-                    event.preventDefault();
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                });
-            }
-
-            // Anchors that exist only to be styled should not jump to the top.
-            document.addEventListener('click', function (event) {
-                var anchor = event.target.closest('a[href="#"]');
-                if (anchor) { event.preventDefault(); }
-            });
-        }());
-    </script>
-<script data-goatcounter="https://trungdong.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script></body>
+    <script src="https://trungdong.github.io/theme/js/site.js" defer></script>
+<script data-goatcounter="https://trungdong.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script></body>
 </html>

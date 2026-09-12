@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://gc.zgo.at https://giscus.app; connect-src 'self' https://trungdong.goatcounter.com; img-src 'self' https://trungdong.goatcounter.com; frame-src https://giscus.app https://player.vimeo.com; style-src 'self' 'unsafe-inline' https://giscus.app; base-uri 'none'; object-src 'none'; form-action 'none'">    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="The PROV Python package finally reached 3.x this summer. Here is what changed, who I found using it (far more people than I expected), and why it is time to unpin 1.5.1 and 2.1.1.">
 
     <meta property="og:site_name" content="Dong Huynh">
@@ -69,7 +69,7 @@
                         </p>
                 </header>
             </section>
-            <p><a href="https://github.com/trungdong/prov/network/dependents"><img alt="GitHub's dependency graph shows over 7,000 public repositories using the prov package" src="https://trungdong.github.io/images/provpy-3-used-by.png"></a></p>
+            <p><a href="https://github.com/trungdong/prov/network/dependents"><img alt="GitHub's dependency graph shows over 7,000 public repositories using the prov package" src="https://trungdong.github.io/images/provpy-3-used-by.png" width="2400" height="1200"></a></p>
 <p>It has been nearly six years since I last wrote about the <a href="https://pypi.org/project/prov/">PROV Python package</a> here, when <a href="https://trungdong.github.io/provpy-2.0.0.html">2.0.0 dropped Python 2</a>. A lot has happened since, and most of it this summer. 3.0.0 came out in July, 3.1.0 added <a href="https://www.w3.org/submissions/prov-jsonld/">PROV-JSONLD</a> in August, and 3.1.1 followed in September with a round of fixes and hardening. Three releases in three months deserve at least one post, so here it is.</p>
 <h2>What changed in 3.x</h2>
 <p>The 3.x line is where the modernisation work I started in July, and shipped step by step through the 2.x releases of this summer, finally landed. Here is the short version.</p>
@@ -103,7 +103,7 @@
         data-reactions-enabled="1"
         data-emit-metadata="0"
         data-input-position="top"
-        data-theme="light"
+        data-theme="preferred_color_scheme"
         data-lang="en"
         data-loading="lazy"
         crossorigin="anonymous"
@@ -117,28 +117,6 @@
 </footer>        </div>
     </div>
 </div>
-    <script>
-        // Replaces jQuery 2.0.3, which the theme loaded from a CDN to do only this.
-        (function () {
-            var top = document.querySelector('.go-top');
-            if (top) {
-                var sync = function () {
-                    top.classList.toggle('is-visible', window.scrollY > 200);
-                };
-                sync();
-                window.addEventListener('scroll', sync, { passive: true });
-                top.addEventListener('click', function (event) {
-                    event.preventDefault();
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                });
-            }
-
-            // Anchors that exist only to be styled should not jump to the top.
-            document.addEventListener('click', function (event) {
-                var anchor = event.target.closest('a[href="#"]');
-                if (anchor) { event.preventDefault(); }
-            });
-        }());
-    </script>
-<script data-goatcounter="https://trungdong.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script></body>
+    <script src="https://trungdong.github.io/theme/js/site.js" defer></script>
+<script data-goatcounter="https://trungdong.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script></body>
 </html>

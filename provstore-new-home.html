@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="With my move to a new institution, the ProvStore at Southampton is no longer maintained. In the recent months, we have been gradually migrating the PROV services to a new home at...">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://gc.zgo.at https://giscus.app; connect-src 'self' https://trungdong.goatcounter.com; img-src 'self' https://trungdong.goatcounter.com; frame-src https://giscus.app https://player.vimeo.com; style-src 'self' 'unsafe-inline' https://giscus.app; base-uri 'none'; object-src 'none'; form-action 'none'">    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Updated 12-Sep-2026: ProvStore was retired in December 2024, six years after this move. The links to both services below are kept as plain text. See the software page for its history. With my move...">
 
     <meta property="og:site_name" content="Dong Huynh">
     <meta property="og:type" content="article">
     <meta property="og:title" content="A new home for ProvStore">
-    <meta property="og:description" content="With my move to a new institution, the ProvStore at Southampton is no longer maintained. In the recent months, we have been gradually migrating the PROV services to a new home at...">
+    <meta property="og:description" content="Updated 12-Sep-2026: ProvStore was retired in December 2024, six years after this move. The links to both services below are kept as plain text. See the software page for its history. With my move...">
     <meta property="og:url" content="https://trungdong.github.io/provstore-new-home.html">
     <meta property="og:image" content="https://trungdong.github.io/images/dong.huynh.cover.jpg">
     <meta property="article:published_time" content="2018-06-26T00:09:36+01:00">
@@ -18,7 +18,7 @@
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": "A new home for ProvStore",
-        "description": "With my move to a new institution, the ProvStore at Southampton is no longer maintained. In the recent months, we have been gradually migrating the PROV services to a new home at...",
+        "description": "Updated 12-Sep-2026: ProvStore was retired in December 2024, six years after this move. The links to both services below are kept as plain text. See the software page for its history. With my move...",
         "datePublished": "2018-06-26T00:09:36+01:00",
         "author": {"@type": "Person", "@id": "https://trungdong.github.io/#person", "name": "Dong Huynh"},
         "url": "https://trungdong.github.io/provstore-new-home.html",
@@ -67,12 +67,13 @@
                         </p>
                 </header>
             </section>
-            <p>With my move to a new institution, the <a href="http://provenance.ecs.soton.ac.uk/store/">ProvStore at
-Southampton</a> is no longer maintained.
+            <p><em>Updated 12-Sep-2026</em>: ProvStore was retired in December 2024, six years after this move. The links to both services below are kept as plain text. See <a href="https://trungdong.github.io/software.html">the software page</a> for its history.</p>
+<p>With my move to a new institution, the ProvStore at
+Southampton is no longer maintained.
 In the recent months, we have been gradually migrating the PROV services to a
 new home at <a href="https://openprovenance.org/">openprovenance.org</a>, hosted by King's
 College London.</p>
-<p><strong>The new ProvStore service now lives at <a href="https://openprovenance.org/store/">openprovenance.org/store</a></strong>.</p>
+<p><strong>The new ProvStore service now lives at openprovenance.org/store</strong>.</p>
 <p>(Please see <a href="https://lucmoreau.wordpress.com/2018/06/21/openprovenance-org-relaunched/">Luc's blog post</a> for the other services)</p>
 <h2>Backup your ProvStore data</h2>
 <p>We plan to retire the Southampton ProvStore service soon this year. In order to
@@ -80,19 +81,19 @@ help the current users in downloading their data there, I wrote a ProvStore
 backup script (in Python): <a href="https://github.com/trungdong/provstore-backup">github.com/trungdong/provstore-backup</a>.</p>
 <p>Due to data protection, it is not possible for us to migrate user data to the
 new service. If you want to use the new ProvStore for storing your backed up
-provenance documents, you will need to create an account at the <a href="https://openprovenance.org/store/">new
-ProvStore</a> and upload the documents
+provenance documents, you will need to create an account at the new
+ProvStore and upload the documents
 following the <a href="https://github.com/trungdong/provstore-backup#restore-instructions">restore instructions</a>.</p>
 <h2>Other changes</h2>
-<p>With the impending <a href="https://pythonclock.org">retirement of Python 2</a>, I have
+<p>With the impending retirement of Python 2, I have
 migrated the code base of ProvStore to <strong>Python 3</strong>, which is
 powering the new service.</p>
 <p>In addition, ProvStore is now using <a href="https://www.keycloak.org">Keycloak</a> as the
 authentication backend, with the view that it will be the central identity
 management service for all our future services at openprovenance.org.</p>
 <p>Undoubtedly, with such major changes to ProvStore, unforeseen issues will
-emerge. If you run into problems using the new service, please do <a href="https://provenance.uservoice.com">report
-them</a> and I will try to address them.</p>
+emerge. If you run into problems using the new service, please do report
+them and I will try to address them.</p>
             <div class="hr"></div>
             <a href="#" class="go-top">Go Top</a>
 <div class="comments">
@@ -106,7 +107,7 @@ them</a> and I will try to address them.</p>
         data-reactions-enabled="1"
         data-emit-metadata="0"
         data-input-position="top"
-        data-theme="light"
+        data-theme="preferred_color_scheme"
         data-lang="en"
         data-loading="lazy"
         crossorigin="anonymous"
@@ -120,28 +121,6 @@ them</a> and I will try to address them.</p>
 </footer>        </div>
     </div>
 </div>
-    <script>
-        // Replaces jQuery 2.0.3, which the theme loaded from a CDN to do only this.
-        (function () {
-            var top = document.querySelector('.go-top');
-            if (top) {
-                var sync = function () {
-                    top.classList.toggle('is-visible', window.scrollY > 200);
-                };
-                sync();
-                window.addEventListener('scroll', sync, { passive: true });
-                top.addEventListener('click', function (event) {
-                    event.preventDefault();
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                });
-            }
-
-            // Anchors that exist only to be styled should not jump to the top.
-            document.addEventListener('click', function (event) {
-                var anchor = event.target.closest('a[href="#"]');
-                if (anchor) { event.preventDefault(); }
-            });
-        }());
-    </script>
-<script data-goatcounter="https://trungdong.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script></body>
+    <script src="https://trungdong.github.io/theme/js/site.js" defer></script>
+<script data-goatcounter="https://trungdong.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script></body>
 </html>

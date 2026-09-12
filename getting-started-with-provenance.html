@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://gc.zgo.at https://giscus.app; connect-src 'self' https://trungdong.goatcounter.com; img-src 'self' https://trungdong.goatcounter.com; frame-src https://giscus.app https://player.vimeo.com; style-src 'self' 'unsafe-inline' https://giscus.app; base-uri 'none'; object-src 'none'; form-action 'none'">    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Where to start if you are interested in learning about provenance? tracking provenance in your application? or just playing with some provenance data? This post aims to list all the tools,...">
 
     <meta property="og:site_name" content="Dong Huynh">
@@ -75,6 +75,7 @@
 provenance in your application? or just playing with some provenance data?</p>
 <p>This post aims to list all the tools, software, and materials that I know about to everyone find what they need.</p>
 <p><strong>ONGOING -- STILL BEING UPDATED</strong></p>
+<p><em>Updated 12-Sep-2026</em>: ProvStore was retired in December 2024. Its entries below are kept as plain text. See <a href="https://trungdong.github.io/software.html">the software page</a> for its history.</p>
 <h2>Provenance concepts</h2>
 <p>PROV is the current standard for provenance (by the World Wide Web Consortium).
 I recommend looking at the document roadmap in <a href="https://www.w3.org/TR/prov-overview/">PROV-OVERVIEW</a>
@@ -96,7 +97,7 @@ standardisation of PROV, useful.</p>
 </ul>
 <h2>Software &amp; Web Applications</h2>
 <ul>
-<li><a href="https://openprovenance.org/store/">ProvStore</a>: a free public repository for provenance documents (<a href="https://openprovenance.org/store/help/api/">REST API</a> available).</li>
+<li>ProvStore: a free public repository for provenance documents (REST API available). Retired in December 2024.</li>
 <li><a href="https://openprovenance.org/services/view/validator">ProvValidator</a>: a validator to check if your provenance is valid (against <a href="https://www.w3.org/TR/prov-constraints/">PROV-CONSTRAINTS</a>)</li>
 <li><a href="https://openprovenance.org/services/view/translator">ProvTranslator</a>: an online translator that converts your provenance into a PROV serialisations or SVG graphical format.</li>
 <li><a href="https://github.com/lucmoreau/ProvToolbox/wiki/provconvert">provconvert</a>: a command-line tool provided by ProvToolbox, which provides a convenient way to convert provenance data on your machine. It supports all PROV serialisations and various graphical outputs (e.g. SVG, PDF).</li>
@@ -104,7 +105,7 @@ standardisation of PROV, useful.</p>
 </ul>
 <h2>Provenance Data</h2>
 <ul>
-<li><a href="https://openprovenance.org/store/public/">Public documents on ProvStore</a></li>
+<li>Public documents on ProvStore (retired in December 2024)</li>
 <li><a href="https://lucmoreau.wordpress.com/category/provenance-in-the-wild/">Provenance in the wild</a></li>
 <li><a href="http://stats.lod2.eu/vocabularies/278">Linked datasets using PROV</a></li>
 <li><a href="https://lov.okfn.org/dataset/lov/vocabs/prov">Vocabularies using PROV</a></li>
@@ -113,8 +114,6 @@ standardisation of PROV, useful.</p>
 provided by the <a href="https://github.com/lucmoreau/ProvToolbox/wiki/provconvert">provconvert</a> utility that comes with ProvToolbox (see above).</p>
 <h2>What have I missed?</h2>
 <p>Do let me know by dropping me a message below.</p>
-<p><a href="https://twitter.com/intent/tweet?screen_name=trungdong" class="twitter-mention-button" data-show-count="false">Tweet to @trungdong</a></p>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
             <div class="hr"></div>
             <a href="#" class="go-top">Go Top</a>
 <div class="comments">
@@ -128,7 +127,7 @@ provided by the <a href="https://github.com/lucmoreau/ProvToolbox/wiki/provconve
         data-reactions-enabled="1"
         data-emit-metadata="0"
         data-input-position="top"
-        data-theme="light"
+        data-theme="preferred_color_scheme"
         data-lang="en"
         data-loading="lazy"
         crossorigin="anonymous"
@@ -142,28 +141,6 @@ provided by the <a href="https://github.com/lucmoreau/ProvToolbox/wiki/provconve
 </footer>        </div>
     </div>
 </div>
-    <script>
-        // Replaces jQuery 2.0.3, which the theme loaded from a CDN to do only this.
-        (function () {
-            var top = document.querySelector('.go-top');
-            if (top) {
-                var sync = function () {
-                    top.classList.toggle('is-visible', window.scrollY > 200);
-                };
-                sync();
-                window.addEventListener('scroll', sync, { passive: true });
-                top.addEventListener('click', function (event) {
-                    event.preventDefault();
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                });
-            }
-
-            // Anchors that exist only to be styled should not jump to the top.
-            document.addEventListener('click', function (event) {
-                var anchor = event.target.closest('a[href="#"]');
-                if (anchor) { event.preventDefault(); }
-            });
-        }());
-    </script>
-<script data-goatcounter="https://trungdong.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script></body>
+    <script src="https://trungdong.github.io/theme/js/site.js" defer></script>
+<script data-goatcounter="https://trungdong.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script></body>
 </html>

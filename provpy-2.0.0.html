@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://gc.zgo.at https://giscus.app; connect-src 'self' https://trungdong.goatcounter.com; img-src 'self' https://trungdong.goatcounter.com; frame-src https://giscus.app https://player.vimeo.com; style-src 'self' 'unsafe-inline' https://giscus.app; base-uri 'none'; object-src 'none'; form-action 'none'">    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="With Python 2 having reached its end-of-line at the beginning of the year, it is now time for the PROV Python package to move on. Starting from prov&#39;s version 2.0.0, only Python version 3.6+ and...">
 
     <meta property="og:site_name" content="Dong Huynh">
@@ -68,7 +68,7 @@
                         </p>
                 </header>
             </section>
-            <p><a href="https://pypi.org/project/prov/"><img alt="PROV Python package on pypi.org" src="https://trungdong.github.io/images/prov-2.0.0-pypi.png"></a></p>
+            <p><a href="https://pypi.org/project/prov/"><img alt="PROV Python package on pypi.org" src="https://trungdong.github.io/images/prov-2.0.0-pypi.png" width="1734" height="1178"></a></p>
 <p>With <a href="https://endoflife.date/python">Python 2 having reached its end-of-line</a> at the beginning of the year, it is now time for the <a href="https://pypi.org/project/prov/">PROV Python package</a> to move on. Starting from prov's version 2.0.0, only Python version 3.6+ and <a href="https://www.pypy.org/">PyPy3</a> are supported.</p>
 <p>If you still want to work with Python 2, do not upgrade to version 2 or later. With a new install, you will also need to specify a <strong>prov</strong>'s version &lt; 2 (for example, <code>pip install "prov&lt;2"</code>).</p>
 <p>As always, if you have any problem with the package, please <a href="https://github.com/trungdong/prov/issues">file an issue report</a>.</p>
@@ -85,7 +85,7 @@
         data-reactions-enabled="1"
         data-emit-metadata="0"
         data-input-position="top"
-        data-theme="light"
+        data-theme="preferred_color_scheme"
         data-lang="en"
         data-loading="lazy"
         crossorigin="anonymous"
@@ -99,28 +99,6 @@
 </footer>        </div>
     </div>
 </div>
-    <script>
-        // Replaces jQuery 2.0.3, which the theme loaded from a CDN to do only this.
-        (function () {
-            var top = document.querySelector('.go-top');
-            if (top) {
-                var sync = function () {
-                    top.classList.toggle('is-visible', window.scrollY > 200);
-                };
-                sync();
-                window.addEventListener('scroll', sync, { passive: true });
-                top.addEventListener('click', function (event) {
-                    event.preventDefault();
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                });
-            }
-
-            // Anchors that exist only to be styled should not jump to the top.
-            document.addEventListener('click', function (event) {
-                var anchor = event.target.closest('a[href="#"]');
-                if (anchor) { event.preventDefault(); }
-            });
-        }());
-    </script>
-<script data-goatcounter="https://trungdong.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script></body>
+    <script src="https://trungdong.github.io/theme/js/site.js" defer></script>
+<script data-goatcounter="https://trungdong.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script></body>
 </html>

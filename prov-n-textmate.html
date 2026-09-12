@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://gc.zgo.at https://giscus.app; connect-src 'self' https://trungdong.goatcounter.com; img-src 'self' https://trungdong.goatcounter.com; frame-src https://giscus.app https://player.vimeo.com; style-src 'self' 'unsafe-inline' https://giscus.app; base-uri 'none'; object-src 'none'; form-action 'none'">    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="The Provenance Notation (PROV-N) has been my chosen representation when it comes to writing provenance. It has a relatively low cognitive cost and easier for humans to read (at least to me),...">
 
     <meta property="og:site_name" content="Dong Huynh">
@@ -80,9 +80,9 @@ provenance for syntactical errors. Hence the motivation to find a tool to help
 write provenance faster with less mistakes.</p>
 <p>Here comes <a href="https://macromates.com/">TextMate</a>!  </p>
 <p>TextMate is a powerful text editor on Mac (which I have only used it lightly, on and off). It provides support for numerous text file formats thanks to the flexible extensibility it offers. Having discovered how to <a href="https://macromates.com/manual/en/language_grammars">define a new language</a> in TextMate, I set off trying to find a way to alleviate my pains with PROV-N authoring right away. To cut the story short, here is the results.  </p>
-<p><img class="pure-img centered" src="https://trungdong.github.io/images/textmate-prov-n-screenshot.png" title="Screenshot of TextMate with PROV-N syntax highlighting" alt="Screenshot of TextMate with PROV-N syntax highlighting"></p>
+<p><img class="pure-img centered" src="https://trungdong.github.io/images/textmate-prov-n-screenshot.png" title="Screenshot of TextMate with PROV-N syntax highlighting" alt="Screenshot of TextMate with PROV-N syntax highlighting" width="640" height="720"></p>
 <p>If you like what you see, grab the PROV-N TextMate bundle from my <a href="https://github.com/trungdong/provn-textmate">github repository</a>. An installation of TextMate, of course, is required.  </p>
-<p><img class="pure-img float-right" src="https://trungdong.github.io/images/textmate-prov-n-snippets.png" title="PROV-N Snippets" alt="PROV-N Snippets">
+<p><img class="pure-img float-right" src="https://trungdong.github.io/images/textmate-prov-n-snippets.png" title="PROV-N Snippets" alt="PROV-N Snippets" width="148" height="389" loading="lazy">
 In addition to the PROV-N syntax highlighting, another bonus provided by the bundle is the <a href="https://macromates.com/manual/en/bundles#tab_triggers">tab-triggered snippets</a> for all PROV-N statements. For example, you can just type <span style="font-family: Courier New, Courier, monospace;">wd⇥</span> (<span style="font-family: 'Courier New', Courier, monospace;">⇥</span> is the tab key) to get <span style="font-family: Courier New, Courier, monospace;">wasDerivedFrom(, , -, -, -, [])</span>. The list of all snippets is on the right (or look them up in the Bundles &gt; Provenance Notation menu in TextMate). Please note though that the PROV attributes snippets are available only between the square brackets (i.e. the attributes block) in a statement.  </p>
 <p>Disclaimer: The bundle is my very first attempt and there are many issues remained. Please don't expect it supports all possible valid PROV-N statements.  </p>
 <p>If you are working with PROV-N, I hope you will find this TextMate bundle useful. Contributions and suggestions are very welcome.  </p>
@@ -101,7 +101,7 @@ In addition to the PROV-N syntax highlighting, another bonus provided by the bun
         data-reactions-enabled="1"
         data-emit-metadata="0"
         data-input-position="top"
-        data-theme="light"
+        data-theme="preferred_color_scheme"
         data-lang="en"
         data-loading="lazy"
         crossorigin="anonymous"
@@ -115,28 +115,6 @@ In addition to the PROV-N syntax highlighting, another bonus provided by the bun
 </footer>        </div>
     </div>
 </div>
-    <script>
-        // Replaces jQuery 2.0.3, which the theme loaded from a CDN to do only this.
-        (function () {
-            var top = document.querySelector('.go-top');
-            if (top) {
-                var sync = function () {
-                    top.classList.toggle('is-visible', window.scrollY > 200);
-                };
-                sync();
-                window.addEventListener('scroll', sync, { passive: true });
-                top.addEventListener('click', function (event) {
-                    event.preventDefault();
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                });
-            }
-
-            // Anchors that exist only to be styled should not jump to the top.
-            document.addEventListener('click', function (event) {
-                var anchor = event.target.closest('a[href="#"]');
-                if (anchor) { event.preventDefault(); }
-            });
-        }());
-    </script>
-<script data-goatcounter="https://trungdong.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script></body>
+    <script src="https://trungdong.github.io/theme/js/site.js" defer></script>
+<script data-goatcounter="https://trungdong.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script></body>
 </html>

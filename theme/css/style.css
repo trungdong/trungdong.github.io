@@ -46,6 +46,11 @@ img, svg, iframe {
     max-width: 100%;
 }
 
+/* Body images carry width/height attributes; keep the ratio when max-width bites. */
+img {
+    height: auto;
+}
+
 a {
     text-decoration: none;
     color: var(--link);
