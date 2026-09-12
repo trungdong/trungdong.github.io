@@ -60,6 +60,13 @@ a:focus {
     text-decoration: underline;
 }
 
+/* Links inside running text are underlined so colour is not the only cue (WCAG 1.4.1). */
+.content p a,
+.content li a {
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+}
+
 /* Visible keyboard focus. The old theme had none. */
 a:focus-visible {
     outline: 2px solid currentColor;
@@ -246,6 +253,7 @@ pre {
 .post-category {
     margin: 0 0.1em;
     padding: 0.2em 0.6em;
+    text-decoration: none;
     color: #fff;
     background: #6f6f6d;
     font-size: 90%;
