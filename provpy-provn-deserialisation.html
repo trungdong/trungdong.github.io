@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://gc.zgo.at https://giscus.app; connect-src 'self' https://trungdong.goatcounter.com; img-src 'self' https://trungdong.goatcounter.com; frame-src https://giscus.app https://player.vimeo.com; style-src 'self' 'unsafe-inline' https://giscus.app; base-uri 'none'; object-src 'none'; form-action 'none'">    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The PROV Python package now reads PROV-N, the notation used throughout the W3C PROV documents, so you can load it straight into Python, then draw it, convert it or build on it.">
+
+    <meta property="og:site_name" content="Dong Huynh">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Reading PROV-N in Python">
+    <meta property="og:description" content="The PROV Python package now reads PROV-N, the notation used throughout the W3C PROV documents, so you can load it straight into Python, then draw it, convert it or build on it.">
+    <meta property="og:url" content="https://trungdong.github.io/provpy-provn-deserialisation.html">
+    <meta property="og:image" content="https://trungdong.github.io/images/provpy-provn.png">
+    <meta property="article:published_time" content="2026-09-29T18:30:00+01:00">
+    <meta name="twitter:card" content="summary_large_image">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Reading PROV-N in Python",
+        "description": "The PROV Python package now reads PROV-N, the notation used throughout the W3C PROV documents, so you can load it straight into Python, then draw it, convert it or build on it.",
+        "datePublished": "2026-09-29T18:30:00+01:00",
+        "author": {"@type": "Person", "@id": "https://trungdong.github.io/#person", "name": "Dong Huynh"},
+        "url": "https://trungdong.github.io/provpy-provn-deserialisation.html",
+        "image": "https://trungdong.github.io/images/provpy-provn.png"
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "@id": "https://trungdong.github.io/#person",
+        "name": "Dong Huynh",
+        "url": "https://trungdong.github.io/",
+        "image": "https://trungdong.github.io/images/dong.huynh.profile.jpg",
+        "sameAs": ["https://orcid.org/0000-0003-4937-2473", "https://scholar.google.co.uk/citations?user=d92eou8AAAAJ", "https://github.com/trungdong", "https://www.linkedin.com/in/donghuynh"]
+    }
+    </script>
+
+        <link rel="alternate"  href="https://trungdong.github.io/feeds/all.atom.xml" type="application/atom+xml" title="Dong Huynh Full Atom Feed"/>
+
+        <title>Reading PROV-N in Python // Dong Huynh</title>
+
+
+    <link rel="stylesheet" href="https://trungdong.github.io/theme/css/style.css">
+    <link rel="stylesheet" href="https://trungdong.github.io/theme/css/pygments.css">
+</head>
+
+<body>
+<div id="layout">
+    <div class="sidebar sidebar-article">
+        <header class="header-article">
+            <h2 class="article-info"><a href="https://trungdong.github.io/author/dong-huynh.html" title="See posts by Dong Huynh">Dong Huynh</a></h2>
+            <h3 class="published-label">Published</h3>
+            <p><time datetime="2026-09-29T18:30:00+01:00">Tue 29 September 2026</time></p>
+            <a href="/">&larr;Home</a>
+        </header>
+    </div>
+    <div class="main">
+        <main class="content">
+            <section class="post">
+                <header class="post-header">
+                    <h1>Reading PROV-N in Python</h1>
+                        <p class="post-meta">
+                            // under                                 <a class="post-category" href="https://trungdong.github.io/tag/provpy.html">ProvPy</a>
+                                <a class="post-category" href="https://trungdong.github.io/tag/python.html">Python</a>
+                                <a class="post-category" href="https://trungdong.github.io/tag/prov.html">PROV</a>
+                                <a class="post-category" href="https://trungdong.github.io/tag/prov-n.html">PROV-N</a>
+                        </p>
+                </header>
+            </section>
+            <p><a href="https://www.w3.org/TR/prov-n/">PROV-N</a> is the notation most of us meet first in PROV. The <a href="https://www.w3.org/TR/prov-primer/">PROV Primer</a>, the specifications and most papers use it, because it is the form of provenance that is easiest to read. Since version 3.2, the <a href="https://pypi.org/project/prov/">PROV Python package</a> reads PROV-N as well as writes it, so anything you can write in the notation you can now load, draw and convert in Python.</p>
+<h2>Try it</h2>
+<p>Here is a small piece of provenance in PROV-N. Derek compiles a chart from a dataset.</p>
+<div class="highlight"><pre><span></span><code><span class="nx">document</span>
+<span class="w">  </span><span class="nx">prefix</span><span class="w"> </span><span class="nx">ex</span><span class="w"> </span><span class="p">&lt;</span><span class="nx">http</span><span class="p">:</span><span class="c1">//example.org/&gt;</span>
+
+<span class="w">  </span><span class="nx">entity</span><span class="p">(</span><span class="nx">ex</span><span class="p">:</span><span class="nx">dataset</span><span class="p">)</span>
+<span class="w">  </span><span class="nx">entity</span><span class="p">(</span><span class="nx">ex</span><span class="p">:</span><span class="nx">chart</span><span class="p">)</span>
+<span class="w">  </span><span class="nx">activity</span><span class="p">(</span><span class="nx">ex</span><span class="p">:</span><span class="nx">compile</span><span class="p">)</span>
+<span class="w">  </span><span class="nx">agent</span><span class="p">(</span><span class="nx">ex</span><span class="p">:</span><span class="nx">derek</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="nx">prov</span><span class="p">:</span><span class="k">type</span><span class="p">=</span><span class="err">&#39;</span><span class="nx">prov</span><span class="p">:</span><span class="nx">Person</span><span class="err">&#39;</span><span class="p">])</span>
+
+<span class="w">  </span><span class="nx">used</span><span class="p">(</span><span class="nx">ex</span><span class="p">:</span><span class="nx">compile</span><span class="p">,</span><span class="w"> </span><span class="nx">ex</span><span class="p">:</span><span class="nx">dataset</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="p">)</span>
+<span class="w">  </span><span class="nx">wasGeneratedBy</span><span class="p">(</span><span class="nx">ex</span><span class="p">:</span><span class="nx">chart</span><span class="p">,</span><span class="w"> </span><span class="nx">ex</span><span class="p">:</span><span class="nx">compile</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="p">)</span>
+<span class="w">  </span><span class="nx">wasAssociatedWith</span><span class="p">(</span><span class="nx">ex</span><span class="p">:</span><span class="nx">compile</span><span class="p">,</span><span class="w"> </span><span class="nx">ex</span><span class="p">:</span><span class="nx">derek</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="p">)</span>
+<span class="w">  </span><span class="nx">wasDerivedFrom</span><span class="p">(</span><span class="nx">ex</span><span class="p">:</span><span class="nx">chart</span><span class="p">,</span><span class="w"> </span><span class="nx">ex</span><span class="p">:</span><span class="nx">dataset</span><span class="p">)</span>
+<span class="nx">endDocument</span>
+</code></pre></div>
+
+<p>Three lines of Python load it and draw it:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">prov</span>
+
+<span class="n">document</span> <span class="o">=</span> <span class="n">prov</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">&quot;example.provn&quot;</span><span class="p">)</span>
+<span class="n">document</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="s2">&quot;example.png&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<p><img alt="The diagram drawn from the PROV-N example: Derek, the compile activity, the dataset and the chart" src="https://trungdong.github.io/images/provpy-provn.png" width="439" height="378"></p>
+<p><code>prov.read()</code> recognises PROV-N on its own, so you do not need to name the format. What comes back is an ordinary <code>ProvDocument</code>, which you can add to, merge with other documents or save in any format the package supports.</p>
+<h2>What you can do with it</h2>
+<ul>
+<li><strong>Sketch before you code.</strong> Write by hand the provenance you want your application to record, load it, and compare it with what your code produces. A PROV-N file makes a test fixture you can read at a glance.</li>
+<li><strong>Reuse examples.</strong> Take an example from a specification or a paper and work with it in Python straight away.</li>
+<li><strong>Convert without Java.</strong> Until now, reading PROV-N meant <a href="https://github.com/lucmoreau/ProvToolbox">ProvToolbox</a>. Now one command turns a PROV-N file into PROV-JSON, <a href="https://www.w3.org/submissions/prov-jsonld/">PROV-JSONLD</a> or RDF, and another draws it without any Python:</li>
+</ul>
+<div class="highlight"><pre><span></span><code>prov-convert<span class="w"> </span>-i<span class="w"> </span>provn<span class="w"> </span>-f<span class="w"> </span>json<span class="w"> </span>example.provn<span class="w"> </span>example.json
+prov-convert<span class="w"> </span>-i<span class="w"> </span>provn<span class="w"> </span>-f<span class="w"> </span>png<span class="w"> </span>example.provn<span class="w"> </span>example.png
+</code></pre></div>
+
+<h2>When a file is not quite right</h2>
+<p>Hand-written PROV-N often has a slip or two. A syntax error gives you the line, the column and what went wrong, for example <code>line 2, column 10: cannot resolve 'ex:e1': prefix 'ex' is not declared</code>. If you only need to rescue what a damaged file still holds, read it with <code>profile="lenient"</code>, which skips each statement it cannot read, warns you about it and keeps the rest. To check that a file follows the W3C grammar to the letter, use <code>profile="strict"</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="n">document</span> <span class="o">=</span> <span class="n">prov</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">&quot;draft.provn&quot;</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;provn&quot;</span><span class="p">,</span> <span class="n">profile</span><span class="o">=</span><span class="s2">&quot;lenient&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<p>The <a href="https://prov.readthedocs.io/en/latest/howto/provn.html">PROV-N how-to guide</a> covers both.</p>
+<h2>Get it</h2>
+<p>Install or upgrade with <code>pip install --upgrade prov</code>. Reading PROV-N needs nothing extra. Drawing needs the <code>dot</code> extra, <code>pip install --upgrade "prov[dot]"</code>, and <a href="https://graphviz.org/">Graphviz</a> on your machine.</p>
+<p>Reading PROV-N was first requested <a href="https://github.com/trungdong/prov/issues/122">in 2018</a>, and it has been one of the longest-standing feature requests on the tracker. I am happy to have finally closed it with this release.</p>
+            <div class="hr"></div>
+            <a href="#" class="go-top">Go Top</a>
+<div class="comments">
+    <script src="https://giscus.app/client.js"
+        data-repo="trungdong/trungdong.github.io"
+        data-repo-id="MDEwOlJlcG9zaXRvcnk0MDY2MTE0Nw=="
+        data-category="Comments"
+        data-category-id="DIC_kwDOAmxwm84DFcBh"
+        data-mapping="pathname"
+        data-strict="1"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+    </script>
+    <noscript>Comments are powered by <a href="https://giscus.app">giscus</a> and need JavaScript.</noscript>
+</div><footer class="footer">
+    <p>&copy; Dong Huynh &ndash;
+        Built for <a href="https://getpelican.com/">Pelican</a>
+    </p>
+</footer>        </main>
+    </div>
+</div>
+    <script src="https://trungdong.github.io/theme/js/site.js" defer></script>
+<script data-goatcounter="https://trungdong.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script></body>
+</html>
