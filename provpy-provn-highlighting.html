@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://gc.zgo.at https://giscus.app; connect-src 'self' https://trungdong.goatcounter.com; img-src 'self' https://trungdong.goatcounter.com; frame-src https://giscus.app https://player.vimeo.com; style-src 'self' 'unsafe-inline' https://giscus.app; base-uri 'none'; object-src 'none'; form-action 'none'">    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The PROV Python package now comes with a syntax highlighter for PROV-N, so the PROV-N examples in your LaTeX papers, documentation and notebooks can be in colour.">
+
+    <meta property="og:site_name" content="Dong Huynh">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Highlighting PROV-N in your papers">
+    <meta property="og:description" content="The PROV Python package now comes with a syntax highlighter for PROV-N, so the PROV-N examples in your LaTeX papers, documentation and notebooks can be in colour.">
+    <meta property="og:url" content="https://trungdong.github.io/provpy-provn-highlighting.html">
+    <meta property="og:image" content="https://trungdong.github.io/images/provpy-provn-highlighting.png">
+    <meta property="article:published_time" content="2026-11-09T19:27:00+00:00">
+    <meta name="twitter:card" content="summary_large_image">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Highlighting PROV-N in your papers",
+        "description": "The PROV Python package now comes with a syntax highlighter for PROV-N, so the PROV-N examples in your LaTeX papers, documentation and notebooks can be in colour.",
+        "datePublished": "2026-11-09T19:27:00+00:00",
+        "author": {"@type": "Person", "@id": "https://trungdong.github.io/#person", "name": "Dong Huynh"},
+        "url": "https://trungdong.github.io/provpy-provn-highlighting.html",
+        "image": "https://trungdong.github.io/images/provpy-provn-highlighting.png"
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "@id": "https://trungdong.github.io/#person",
+        "name": "Dong Huynh",
+        "url": "https://trungdong.github.io/",
+        "image": "https://trungdong.github.io/images/dong.huynh.profile.jpg",
+        "sameAs": ["https://orcid.org/0000-0003-4937-2473", "https://scholar.google.co.uk/citations?user=d92eou8AAAAJ", "https://github.com/trungdong", "https://www.linkedin.com/in/donghuynh"]
+    }
+    </script>
+
+        <link rel="alternate"  href="https://trungdong.github.io/feeds/all.atom.xml" type="application/atom+xml" title="Dong Huynh Full Atom Feed"/>
+
+        <title>Highlighting PROV-N in your papers // Dong Huynh</title>
+
+
+    <link rel="stylesheet" href="https://trungdong.github.io/theme/css/style.css">
+    <link rel="stylesheet" href="https://trungdong.github.io/theme/css/pygments.css">
+</head>
+
+<body>
+<div id="layout">
+    <div class="sidebar sidebar-article">
+        <header class="header-article">
+            <h2 class="article-info"><a href="https://trungdong.github.io/author/dong-huynh.html" title="See posts by Dong Huynh">Dong Huynh</a></h2>
+            <h3 class="published-label">Published</h3>
+            <p><time datetime="2026-11-09T19:27:00+00:00">Mon 09 November 2026</time></p>
+            <a href="/">&larr;Home</a>
+        </header>
+    </div>
+    <div class="main">
+        <main class="content">
+            <section class="post">
+                <header class="post-header">
+                    <h1>Highlighting PROV-N in your papers</h1>
+                        <p class="post-meta">
+                            // under                                 <a class="post-category" href="https://trungdong.github.io/tag/provpy.html">ProvPy</a>
+                                <a class="post-category" href="https://trungdong.github.io/tag/python.html">Python</a>
+                                <a class="post-category" href="https://trungdong.github.io/tag/prov.html">PROV</a>
+                                <a class="post-category" href="https://trungdong.github.io/tag/prov-n.html">PROV-N</a>
+                                <a class="post-category" href="https://trungdong.github.io/tag/latex.html">LaTeX</a>
+                        </p>
+                </header>
+            </section>
+            <p>When <a href="https://lucmoreau.wordpress.com">Luc</a> and I wrote up the <a href="http://dx.doi.org/10.1109/TSE.2017.2659745">PROV Templates paper</a> for IEEE TSE in 2018, the PROV-N figures were plain monospace text. To make the template variables stand out, I wrapped each of them in <code>\color{red}</code> by hand. The keywords never got any colour at all. I had written PROV-N highlighters back in 2014, a <a href="https://trungdong.github.io/prov-n-textmate.html">TextMate bundle</a> and an <a href="https://trungdong.github.io/prov-n-javascript-editor.html">online editor</a> built on Ace, but neither could reach a LaTeX paper. With <code>prov</code> <a href="https://github.com/trungdong/prov/releases/tag/3.3.0">3.3.0</a>, now they can.</p>
+<p><img alt="The PROV-N template from the TSE paper, highlighted by LaTeX's minted package with the new lexer" src="https://trungdong.github.io/images/provpy-provn-highlighting.png" width="1333" height="1646"></p>
+<h2>A lexer for PROV-N</h2>
+<p>Version 3.3.0 of the <a href="https://pypi.org/project/prov/">PROV Python package</a> includes a lexer for <a href="https://www.w3.org/TR/prov-n/">PROV-N</a> that plugs into <a href="https://pygments.org/">Pygments</a>. Pygments is the library behind code highlighting in Sphinx, MkDocs, Jupyter, LaTeX's minted package and many other tools. Once <code>prov</code> is installed, any of them that asks Pygments for <code>provn</code> gets PROV-N in colour, with keywords, prefixes, attribute names, strings, times and comments each in their own style.</p>
+<h2>In a LaTeX paper</h2>
+<p>The <a href="https://ctan.org/pkg/minted">minted</a> package highlights code in LaTeX through Pygments. It finds the PROV-N lexer through a <code>latexminted</code> installed with pip beside <code>prov</code>, not the one your TeX distribution ships, so install both in a virtual environment and compile with that environment active:</p>
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>latexminted<span class="w"> </span>prov
+</code></pre></div>
+
+<p>Then put your PROV-N in a <code>minted</code> environment:</p>
+<div class="highlight"><pre><span></span><code><span class="k">\usepackage</span><span class="nb">{</span>minted<span class="nb">}</span>  <span class="c">% in the preamble</span>
+
+<span class="k">\begin</span><span class="nb">{</span>minted<span class="nb">}{</span>provn<span class="nb">}</span>
+document
+  prefix ex &lt;http://example.org/&gt;
+  entity(ex:dataset)
+  activity(ex:compile)
+  used(ex:compile, ex:dataset, -)
+endDocument
+<span class="k">\end</span><span class="nb">{</span>minted<span class="nb">}</span>
+</code></pre></div>
+
+<p>The figure above is the template from the TSE paper set this way, with nothing coloured by hand. The <a href="https://prov.readthedocs.io/en/latest/howto/provn.html#syntax-highlighting">PROV-N how-to guide</a> has the details.</p>
+<h2>Not on Overleaf yet</h2>
+<p>Overleaf cannot install Python packages, so it cannot load the lexer from <code>prov</code>. To fix that, I have <a href="https://github.com/pygments/pygments/pull/3478">proposed the lexer to Pygments itself</a>. If Pygments accepts it, PROV-N highlighting reaches Overleaf with no setup at all, once minted and Overleaf move to a Pygments release that includes it. That will take a while, so for now a local LaTeX installation is the way to go.</p>
+<h2>Everywhere else</h2>
+<p>The same lexer highlights PROV-N wherever Pygments runs. Sphinx, MkDocs and Pelican highlight a <code>provn</code> code block, so on this site, which Pelican builds with <code>prov</code> installed, the block below needs nothing else:</p>
+<div class="highlight"><pre><span></span><code><span class="k">document</span>
+<span class="w">  </span><span class="kd">prefix</span><span class="w"> </span><span class="nn">ex</span><span class="w"> </span><span class="sx">&lt;http://example.org/&gt;</span>
+<span class="w">  </span><span class="k">agent</span><span class="p">(</span><span class="nn">ex</span><span class="p">:</span><span class="n">derek</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="nn">prov</span><span class="p">:</span><span class="na">type</span><span class="p">=</span><span class="s1">&#39;prov:Person&#39;</span><span class="p">,</span><span class="w"> </span><span class="nn">prov</span><span class="p">:</span><span class="na">label</span><span class="p">=</span><span class="s2">&quot;Derek&quot;</span><span class="p">])</span>
+<span class="w">  </span><span class="k">wasAssociatedWith</span><span class="p">(</span><span class="nn">ex</span><span class="p">:</span><span class="n">compile</span><span class="p">,</span><span class="w"> </span><span class="nn">ex</span><span class="p">:</span><span class="n">derek</span><span class="p">,</span><span class="w"> </span><span class="kc">-</span><span class="p">)</span><span class="w">  </span><span class="c1">// Derek ran the compilation</span>
+<span class="k">endDocument</span>
+</code></pre></div>
+
+<p>In a terminal, <code>pygmentize -l provn</code> and <code>prov-convert --color</code> print PROV-N in colour, and one line of nbconvert configuration highlights a Jupyter notebook's <code>%%provn</code> cells when you export it.</p>
+<h2>The rest of 3.3.0</h2>
+<p><code>prov</code> 3.3.0 needs Python 3.11 or later (after Python 3.10 EOL last month), and fixes <a href="https://github.com/trungdong/prov/security/advisories/GHSA-pp6h-3q6w-xr98">a security issue in the PROV-O reader</a>. If you are upgrading, <a href="https://prov.readthedocs.io/en/latest/howto/prepare-for-3-3.html">Upgrading to prov 3.3.0</a> lists what may need changing. To get it, run <code>pip install --upgrade prov</code>.</p>
+            <div class="hr"></div>
+            <a href="#" class="go-top">Go Top</a>
+<div class="comments">
+    <script src="https://giscus.app/client.js"
+        data-repo="trungdong/trungdong.github.io"
+        data-repo-id="MDEwOlJlcG9zaXRvcnk0MDY2MTE0Nw=="
+        data-category="Comments"
+        data-category-id="DIC_kwDOAmxwm84DFcBh"
+        data-mapping="pathname"
+        data-strict="1"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+    </script>
+    <noscript>Comments are powered by <a href="https://giscus.app">giscus</a> and need JavaScript.</noscript>
+</div><footer class="footer">
+    <p>&copy; Dong Huynh &ndash;
+        Built for <a href="https://getpelican.com/">Pelican</a>
+    </p>
+</footer>        </main>
+    </div>
+</div>
+    <script src="https://trungdong.github.io/theme/js/site.js" defer></script>
+<script data-goatcounter="https://trungdong.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script></body>
+</html>
